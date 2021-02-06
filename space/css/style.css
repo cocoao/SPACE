@@ -1,0 +1,89 @@
+/* google font import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
+
+/* reset css */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{font-size: 14px; font-family:'Open Sans', sans-serif;}
+.clear::after{clear: both; content: ''; display: block;}
+.wrap{width: 100%; height: 100%; overflow: hidden;}
+.center{width: 80%; height: auto; max-width: 1200px; margin: auto;}
+ol,ul{list-style: none;}
+a{text-decoration: none; color: #111;}
+img{display: block;}
+button,input,textarea{outline: 0; font-family:'Open Sans', sans-serif; border-radius: 0; background: #fff;}
+input::placeholder,textarea::placeholder{color: #644600;}
+input:focus,textarea:focus{background: #f8f8f8;}
+
+/* general common section style */
+.contents{padding: 50px 0;}
+.contents .title{text-transform: uppercase; width: auto; height: auto; float: left;}
+.contents .title h2{font-size: 50px; font-weight: 300; color: #644600;}
+.contents .title .linkBox{width: 100%; display: flex; align-items: center; position: relative; height: 15px;}
+.contents .title .linkBox hr{border:0; border-bottom: 1px solid #999; width: 100%; display: inline-block; margin: 0 5px 0 0; position: absolute;}
+.contents .title .linkBox a{font-size: 14px; font-weight: 300; color: #888; text-transform: uppercase; display: inline-block; text-align: right; background: #fff; padding: 0 5px;position: absolute; right: 0;}
+.contents .title .linkBox a:hover{color: #644600; font-weight: 400;}
+.hoverWhite{width: 100%; background: rgba(255,255,255,0.5);height: 100%; position: absolute; opacity: 0; transition: all 0.4s;}
+
+/* top main style */
+header{width: 90%; height: auto; margin: auto;}
+header .topMainLeft{width: 40%; float: left; overflow: hidden; height: 45vh; position: relative; background: url(/space/img/main_01.jpg) no-repeat top center; background-size: cover;}
+header .topMainLeft .logo{text-align: right; right: 15%; top: 30%; _transform: translateY(-50%); position: absolute;}
+header .topMainLeft .logo h1{font-size: 60px; font-weight: 300; color: #644600; line-height: 1;}
+header .topMainLeft .logo h1 a{color: #644600;}
+header .topMainLeft .logo hr{border:0; border-bottom: 1px solid #644600; width: 30%; display: inline-block; margin: 0 3px 3px 0;}
+header .topMainLeft .logo p{font-size: 14px; font-weight: 300; color: #644600; text-transform: uppercase; display: inline-block;}
+header .topMainRight{width: 60%; float: right; overflow: hidden; height: 45vh; background: url(/space/img/main_02.jpg) no-repeat center center; background-size: cover;}
+
+header .loginBox{width: 40%; background: #ddd; height: 50px; float: left; display: flex; justify-content:flex-end; align-items: center;}
+header .loginBox a{padding: 0 25px; color:#fff; border-right: 1px solid #fff; font-weight: 600;}
+header .loginBox a:last-child{border-right:0;}
+header .loginBox a:hover{color: #644600;}
+header .gnb{width: 60%; background:#b2a89e; height: 50px; float: right;}
+header .gnb li{float: left; height: 50px; padding: 0 40px; display: flex; align-items: center; font-weight: 400; font-size: 16px;}
+header .gnb li:hover,header .gnb li.active{background: #644600;}
+header .gnb li:hover a,header .gnb li.active a{color: #fff;}
+header .gnb li a{color: #644600;}
+
+/* intro section style */
+.intro .introBox{width: 100%; height: auto; margin: auto; display: flex; justify-content: space-between;padding-top: 50px;}
+.intro .introBox .introCon{width: 32%; height: auto; overflow: hidden; position: relative; overflow: hidden;}
+.intro .introBox .introCon .introTxt{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; line-height: 1; z-index: 1;}
+.intro .introBox .introCon .introTxt em{font-family: 'Euphoria Script', cursive; font-size: 50px; font-style: normal;color: #fff;}
+.intro .introBox .introCon .introTxt h3{font-size: 22px; font-weight: 600;color: #fff;}
+.intro .introBox .introCon:hover em,.intro .introBox .introCon:hover h3{color: #644600;}
+.intro .introBox .introCon:hover .hoverWhite{opacity: 1;}
+.intro .introBox .introCon img{width: 100%;}
+
+/* design section style */
+.interior{background:#e8e8e8;}
+.interior .mainTitle{padding-bottom: 50px;}
+.interior .interiorBox{width: 100%; height: auto; margin: auto; display: flex; justify-content: space-between; _border: 1px solid #644600; padding: 20px 0; border-bottom: 1px dotted #644600;}
+.interior .interiorBox.liv{padding-top: 0;}
+.interior .interiorBox.sto{padding-bottom: 0; border-bottom:0}
+.interior .interiorBox>div{width: 24%; height:200px; overflow: hidden; display: flex; justify-content: center; align-items: center;}
+.interior .interiorTxt{width: 100%; flex-direction: column; text-align: center;}
+.interior .interiorTxt h4{text-transform: uppercase; color: #644600; font-size: 20px; font-weight: 300;}
+.interior .interiorTxt em{font-style: normal; font-weight: 500;}
+.interior .interiorTxt p{line-height: 2;}
+.interior .viewBtn{height: auto; padding:5px 20px; border: 1px solid #644600; margin-top: 20px; text-transform: uppercase; color: #644600; font-weight: 500; font-size: 12px;}
+.interior .viewBtn:hover{background: #644600; color: #fff;}
+.interior .interiorImg{position: relative; width: 100%; border: 10px solid #e8e8e8; outline: 1px solid #644600;}
+.interior .interiorImg .viewBtn{background: #644600; color: #fff; opacity: 0; transition: all 0.4s; position: absolute; z-index: 1;}
+.interior .interiorImg:hover .viewBtn,.interior .interiorImg:hover .hoverWhite{opacity: 1;}
+.interior .interiorBox img{width: 100%;}
+
+/* process section style */
+.process .processBoxes{width: 100%; height: auto; float: left; padding-top: 50px; display: flex;}
+.process .processBoxes>div{float: left;}
+.process .processImgBox{width: 50%; display: flex; flex-wrap: wrap;}
+.process .processImgBox .processImg{width: 50%; overflow: hidden; padding: 5px; position: relative; cursor: pointer;}
+.process .processImgBox .processImg img{width: 100%;}
+.process .processImgBox .processImg>span{display: flex; justify-content: center; align-items: center;}
+.process .processImgBox .processImg>span>i{font-size: 30px; color: #644600; padding: 41%; border: 1px solid #644600;}
+.process .processImgBox .processImg .hoverWhite{width: 97%; height: 97%;}
+.process .processImgBox .processImg:hover .hoverWhite{opacity: 1;}
+
+.process .processTxtBox{width: 50%; padding:5px; height: auto;}
+.process .processTxt{width:100%; height:100%; border: 1px solid #644600;}
