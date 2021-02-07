@@ -12,39 +12,43 @@ body{font-size: 14px; font-family:'Open Sans', sans-serif;}
 ol,ul{list-style: none;}
 a{text-decoration: none; color: #111;}
 img{display: block;}
-button,input,textarea{outline: 0; font-family:'Open Sans', sans-serif; border-radius: 0; background: #fff;}
+button,input,textarea,section{outline: 0; font-family:'Open Sans', sans-serif; border-radius: 0; background: #fff;}
 input::placeholder,textarea::placeholder{color: #644600;}
-input:focus,textarea:focus{background: #f8f8f8;}
+input:focus,textarea:focus{background: #eee;}
 
 /* general common section style */
 .contents{padding: 50px 0;}
-.contents .title{text-transform: uppercase; width: auto; height: auto; float: left;}
+.contents .mainTitle{float: left;}
+.contents .title{text-transform: uppercase; width: auto; height: auto; text-align: center;}
 .contents .title h2{font-size: 50px; font-weight: 300; color: #644600;}
 .contents .title .linkBox{width: 100%; display: flex; align-items: center; position: relative; height: 15px;}
 .contents .title .linkBox hr{border:0; border-bottom: 1px solid #999; width: 100%; display: inline-block; margin: 0 5px 0 0; position: absolute;}
 .contents .title .linkBox a{font-size: 14px; font-weight: 300; color: #888; text-transform: uppercase; display: inline-block; text-align: right; background: #fff; padding: 0 5px;position: absolute; right: 0;}
 .contents .title .linkBox a:hover{color: #644600; font-weight: 400;}
-.hoverWhite{width: 100%; background: rgba(255,255,255,0.5);height: 100%; position: absolute; opacity: 0; transition: all 0.4s;}
+.hoverWhite{width: 100%; background: rgba(255,255,255,0.5);height: 100%; position: absolute; opacity: 0; transition: all 0.4s; padding: 0 10px 10px 0;}
 
 /* top main style */
 header{width: 90%; height: auto; margin: auto;}
 header .topMainLeft{width: 40%; float: left; overflow: hidden; height: 45vh; position: relative; background: url(/space/img/main_01.jpg) no-repeat top center; background-size: cover;}
-header .topMainLeft .logo{text-align: right; right: 15%; top: 30%; _transform: translateY(-50%); position: absolute;}
-header .topMainLeft .logo h1{font-size: 60px; font-weight: 300; color: #644600; line-height: 1;}
-header .topMainLeft .logo h1 a{color: #644600;}
-header .topMainLeft .logo hr{border:0; border-bottom: 1px solid #644600; width: 30%; display: inline-block; margin: 0 3px 3px 0;}
-header .topMainLeft .logo p{font-size: 14px; font-weight: 300; color: #644600; text-transform: uppercase; display: inline-block;}
-header .topMainRight{width: 60%; float: right; overflow: hidden; height: 45vh; background: url(/space/img/main_02.jpg) no-repeat center center; background-size: cover;}
+header .logo{text-align: right; right: 15%; top: 30%; _transform: translateY(-50%); position: absolute;}
+header .logo h1{font-size: 60px; font-weight: 300; color: #644600; line-height: 1;}
+header .logo h1 a{color: #644600;}
+header .logo hr{border:0; border-bottom: 1px solid #644600; width: 30%; display: inline-block; margin: 0 3px 3px 0;}
+header .logo p{font-size: 14px; font-weight: 300; color: #644600; text-transform: uppercase; display: inline-block;}
+header .topMainRight{width: 60%; float: right; overflow: hidden; height: 45vh; background: url(/space/img/main_02.jpg) no-repeat center center; background-size: cover; position: relative;}
+header .topMainRight .logo{display: none;}
 
 header .loginBox{width: 40%; background: #ddd; height: 50px; float: left; display: flex; justify-content:flex-end; align-items: center;}
 header .loginBox a{padding: 0 25px; color:#fff; border-right: 1px solid #fff; font-weight: 600;}
 header .loginBox a:last-child{border-right:0;}
 header .loginBox a:hover{color: #644600;}
-header .gnb{width: 60%; background:#b2a89e; height: 50px; float: right;}
-header .gnb li{float: left; height: 50px; padding: 0 40px; display: flex; align-items: center; font-weight: 400; font-size: 16px;}
+header .gnb{width: 60%; background:#b2a89e; height: 50px; float: right; position: relative;}
+header .gnb li{float: left; height: 50px; width: 20%; display: flex; align-items: center; font-weight: 400; font-size: 16px; justify-content: center; align-items: center;}
 header .gnb li:hover,header .gnb li.active{background: #644600;}
 header .gnb li:hover a,header .gnb li.active a{color: #fff;}
 header .gnb li a{color: #644600;}
+header .mobileMenu{display: none;}
+header .mobileMenu i{font-size: 22px; color: #fff; display: none;}
 
 /* intro section style */
 .intro .introBox{width: 100%; height: auto; margin: auto; display: flex; justify-content: space-between;padding-top: 50px;}
@@ -58,7 +62,7 @@ header .gnb li a{color: #644600;}
 
 /* design section style */
 .interior{background:#e8e8e8;}
-.interior .mainTitle{padding-bottom: 50px;}
+.interior .mainTitle{padding-bottom: 40px;}
 .interior .interiorBox{width: 100%; height: auto; margin: auto; display: flex; justify-content: space-between; _border: 1px solid #644600; padding: 20px 0; border-bottom: 1px dotted #644600;}
 .interior .interiorBox.liv{padding-top: 0;}
 .interior .interiorBox.sto{padding-bottom: 0; border-bottom:0}
@@ -75,15 +79,34 @@ header .gnb li a{color: #644600;}
 .interior .interiorBox img{width: 100%;}
 
 /* process section style */
-.process .processBoxes{width: 100%; height: auto; float: left; padding-top: 50px; display: flex;}
+.process .processBoxes{width: 100%; height: auto; float: left; padding-top: 40px; display: flex;}
 .process .processBoxes>div{float: left;}
 .process .processImgBox{width: 50%; display: flex; flex-wrap: wrap;}
-.process .processImgBox .processImg{width: 50%; overflow: hidden; padding: 5px; position: relative; cursor: pointer;}
+.process .processImgBox .processImg{width: 50%; overflow: hidden; padding: 5px; position: relative; cursor: pointer; height: auto;}
 .process .processImgBox .processImg img{width: 100%;}
 .process .processImgBox .processImg>span{display: flex; justify-content: center; align-items: center;}
-.process .processImgBox .processImg>span>i{font-size: 30px; color: #644600; padding: 41%; border: 1px solid #644600;}
-.process .processImgBox .processImg .hoverWhite{width: 97%; height: 97%;}
+.process .processImgBox .processImg>span>i{font-size: 30px; color: #644600; padding: 5%; border: 3px solid #644600; border-radius: 50%;}
 .process .processImgBox .processImg:hover .hoverWhite{opacity: 1;}
 
 .process .processTxtBox{width: 50%; padding:5px; height: auto;}
-.process .processTxt{width:100%; height:100%; border: 1px solid #644600;}
+.process .processTxt{width:100%; height:100%; border: 1px solid #644600; padding: 5px;float: left;}
+.process .processTxtLine{width:100%; height:100%; border: 1px solid #644600; padding: 30px;display: flex; justify-content: center; flex-direction: column;}
+.process .processTxt em{font-size: 12px; font-weight: 400; font-style: normal; color: #333; transform:translateY(30px); opacity: 0; animation: slideUp 0.4s 1; animation-fill-mode: forwards;animation-delay: 0.4s;}
+.process .processTxt h2{font-weight: 300; font-size: 30px; color: #644600; text-transform: uppercase; transform:translateY(30px); opacity: 0; animation: slideUp 0.4s 1; animation-fill-mode: forwards;}
+.process .processTxt p{font-size: 12px; color: #333; margin-top: 20px;transform:translateY(30px); opacity: 0; animation: slideUp 0.4s 1; animation-fill-mode: forwards; animation-delay: 0.8s;}
+
+/* about section style */
+.about{background:#e8e8e8;}
+.about .aboutTxt{width: 100%; height: auto; text-align: center; margin-top: 30px;}
+.about .aboutTxt p{font-weight: 400; color: #777; line-height: 1.5;}
+.about .aboutTxt p.address{margin-top: 20px; font-weight: 600; color: #333;}
+.about .aboutTxt p.address a{color: #644600; font-weight: 400;}
+
+.about .sns{width: 100%; height: auto; margin: 20px 0; display: flex; align-items: center; justify-content: center;}
+.about .sns ul{display: flex; justify-content: space-evenly; align-items: center;}
+.about .sns ul i.fa{color: #644600; width: 30px; height: 30px; margin: 5px; border: 1px solid #644600; display: flex; align-items: center; justify-content: center;}
+.about .sns ul i.fa:hover{background: #644600; color: #fff;}
+
+/* footer style */
+footer{background: #644600; width: 100%; height: auto;}
+footer p{color: #e8e8e8; text-align: center; text-transform: uppercase; padding: 20px 0; font-size: 12px;}

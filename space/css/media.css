@@ -1,0 +1,120 @@
+@media screen and (max-width:1400px){
+  header{width: 100%;}
+}
+
+@media screen and (max-width:1200px){
+  header .topMainLeft .logo{top:20%}
+  header .topMainRight{height: 35vh;}
+  header .topMainLeft{height: 35vh;}
+
+  /* login, join style */
+  .loginFormBox,.login .findInfo{width: 60%;}
+  .joinBox{width: 80%;}
+}
+
+@media screen and (max-width:900px){
+  header .topMainLeft .logo h1{font-size: 45px;}
+  header .topMainLeft .logo p{font-size: 12px;}
+  header .topMainLeft .logo hr{display: none;}
+  header .topMainRight{height: 30vh;}
+  header .topMainLeft{height: 30vh;}
+  header .gnb li{font-size: 14px;}
+
+  .center{width: 90%;}
+  .contents .title h2{font-size: 35px;}
+  .contents .title .linkBox a{font-size: 12px;}
+  
+  .intro .introBox{padding-top: 35px;}
+
+  .interior .mainTitle{padding-bottom: 30px;}
+  .interior .interiorBox>div{height: 160px;}
+  .interior .interiorTxt h4{font-size: 18px;}
+  .interior .interiorTxt p{font-size: 12px;}
+
+  .process .processBoxes{padding-top: 30px;}
+  .process .processTxtLine{padding: 20px;}
+  .process .processTxt p{line-height: 1.2;}
+  .about .aboutTxt{font-size: 12px;}
+  
+  /* login, join style */
+  .joinBox{width: 90%;}
+}
+
+@media screen and (max-width:750px){
+  header .topMainLeft .logo h1{font-size: 45px;}
+  header .topMainLeft .logo p{font-size: 12px;}
+  header .topMainLeft .logo hr{display: none;}
+  header .topMainRight{width: 100%; height: 20vh;}
+  header .topMainLeft{display:none; height: 30vh;}
+  header .gnb li{font-size: 14px;}
+  header .topMainRight .logo{display: block; left: 50%; top:50%; transform: translate(-50%,-50%); text-align: center;}
+  header .topMainRight .logo h1 a,header .topMainRight .logo p{color: #fff;}
+  header .topMainRight .logo hr{display: none;}
+  header .loginBox{width: 100%; height: 35px; float: none; justify-content:center}
+  header .loginBox a{font-size: 12px;}
+  header .gnb{width: 100%; height:auto;}
+  header .gnb li{height: 40px;}
+  header{display: flex; flex-direction: column;}
+  header>div:nth-child(1){order:3;}
+  header>div:nth-child(2){order:1;}
+  header>div:nth-child(3){order:0;}
+  header>div:nth-child(4){order:2;}
+
+  .contents .title{float: none;}
+  .contents .title .linkBox{display: none;}
+
+  .intro .introBox{flex-wrap: wrap; justify-content: center;}
+  .intro .introBox .introCon{width: 80%; margin: 0 auto 10px; height: 350px; overflow: hidden;}
+  /* .intro .introBox .introCon .introTxt em{font-size: 38px;}
+  .intro .introBox .introCon .introTxt h3{font-size: 16px;} */
+
+  .interior .interiorBox{flex-wrap: wrap; padding: 5px; padding: 20px 0;}
+  .interior .interiorBox>div{width: calc(50% - 5px);}
+  .interior .interiorBox>div:nth-child(2){margin-bottom: 10px;}
+  .interior .viewBtn{padding: 5px 30px; margin-top:10px}
+
+  .process .processBoxes{flex-direction: column;}
+  .process .processImgBox{width: 100%;}
+  .process .processImgBox .processImg{width: 25%;}
+  .process .processTxtBox{width: 100%;}
+  .process .processTxt p{margin: 10px 0;}
+  .about .aboutTxt{margin-top: 20px;}
+
+  /* login, join style */
+  .loginFormBox,.login .findInfo{width: 80%;}
+  .loginFormBox .inputBox label,.loginFormBox .inputBox input, .login .findInfo a,.formBtns button{font-size: 12px;}
+  
+  .joinBox .inputBox label{display: none;}
+  .joinBox .inputBox input{width: 100%; font-size: 12px;}
+  .joinBox .inputBox input.email1{width: 30%;}
+  .joinBox .inputBox input.email2{width: 40%;}
+  .joinBox .inputBox span{width: 5%}
+  .joinBox .inputBox select{width: 25%}
+}
+
+@media screen and (max-width:480px){
+  header .logo h1{font-size: 38px; line-height: 1;}
+  header .logo p{font-size: 12px;}
+  header .gnb{background: #644600; z-index: 99;}
+  header .gnb ul{top: 100%; position: absolute; margin: auto; width: 100%; display: none; }
+  header .gnb li{width:100%; flex-direction: row;background: #b2a89e; padding: 25px 0; border-bottom: 1px solid #644600;}
+  header .gnb li:last-child{border-bottom: 0;}
+  header .mobileMenu{display: flex; height: 40px; position: relative; align-items: center;}
+  header .mobileMenu i.fa{height:auto; display: block; right: 20px; position: absolute;}
+
+  .contents{padding: 40px 0;}
+  .interior .interiorImg{border: 5px;}
+
+  /* login style */
+  .loginFormBox,.login .findInfo{width: 90%;}
+  .joinBox .inputBox label, .loginFormBox .inputBox label{display:none;}
+  .joinBox .inputBox input,.loginFormBox .inputBox input{width:100%;}
+  .formBtns{margin-top: 15px; padding-top: 15px;}
+
+  .joinBox{width: 100%;}
+  .joinBox .inputBox input,.joinBox .inputBox select{font-size: 12px;}
+  .joinBox .inputBox input.email1{width: 32%;}
+  .joinBox .inputBox input.email2{width: 42%;}
+  .joinBox .inputBox span{width: 5%; font-size: 11px;}
+  .joinBox .inputBox select{width: 21%;}
+}

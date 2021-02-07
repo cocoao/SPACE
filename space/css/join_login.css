@@ -1,0 +1,23 @@
+/* join, login form common style */
+.contents.join, .contents.login{padding-bottom: 80px;}
+.joinBox,.loginFormBox{width: 60%; border: 1px solid #644600; padding: 10px; height: auto;margin:auto; margin-top: 30px;}
+.joinBox .inputBox,.loginFormBox .inputBox{width: 100%; display: flex; justify-content: space-between; margin-bottom: 10px;}
+.joinBox .inputBox label,.loginFormBox .inputBox label{background: #644600; color: #fff; width: 25%; height: 40px; display: flex; justify-content: center; align-items: center;}
+.joinBox .inputBox input,.loginFormBox .inputBox input{border: 1px solid #644600; width: 75%; padding: 10px;}
+
+.formBtns{margin-top: 20px; display: flex; justify-content: space-between; border-top: 1px dotted #644600; padding-top: 20px;}
+.formBtns button{width: 49.5%; outline: 0;border: 1px solid #644600; padding: 8px 0; color: #644600; cursor: pointer;}
+.formBtns button:hover{background: #644600; color: #fff;}
+
+/* join form style */
+.joinBox .inputBox input.email1{width: 25%;}
+.joinBox .inputBox input.email2{width: 32%;}
+.joinBox .inputBox span{width: 3%; display: flex; justify-content: center; align-items: center;}
+.joinBox .inputBox select{width: 14.5%; border: 1px solid #644600; outline: 0;margin-left: 0.5%; color: #644600;}
+input:read-only{background-color:#eee}
+
+/* login form style */
+.loginFormBox{width: 45%;}
+.login .findInfo{margin: 10px auto 0; width: 45%; display: flex; justify-content: center; height: auto;}
+.login .findInfo a{text-align: center; color: #644600; width: 30%;}
+.login .findInfo a:last-child{border-left: 1px solid #644600; padding-left: 10px;}
