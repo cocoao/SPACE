@@ -80,6 +80,8 @@
   .process .processTxt p{margin: 10px 0;}
   .about .aboutTxt{margin-top: 20px;}
 
+  .contactBox{width: 100%;}
+
   /* login, join style */
   .loginFormBox,.login .findInfo{width: 80%;}
   .loginFormBox .inputBox label,.loginFormBox .inputBox input, .login .findInfo a,.formBtns button{font-size: 12px;}
@@ -104,6 +106,10 @@
 
   .contents{padding: 40px 0;}
   .interior .interiorImg{border: 5px;}
+
+  .contactBox .NameMail{flex-wrap: wrap;}
+  .contactBox .NameMail>input:nth-child(2){margin-top: 10px;}
+  .contactBox input{width: 100%;}
 
   /* login style */
   .loginFormBox,.login .findInfo{width: 90%;}

@@ -1,4 +1,5 @@
 $(function(){
+  // process section
   $(".processImg").click(function(){
     let proIndex = $(this).index();
     $(".processTxt").hide();
@@ -7,13 +8,7 @@ $(function(){
 
   $(".processImg").eq(0).trigger("click");
 
-  const loca = $(location).attr('href').split('#')[1];
-  console.log(loca)
-  if(loca == 'about'){
-    const aboutOff = $(".process").offset().top;
-    $("html, body").animate({scrollTop:aboutOff}, 1000, 'easeInQuint');
-  }
-
+  // mobile navigation fixed
   let gnbOffTop = $(".gnb").offset().top;
   let fixHeader = function(){
     $(window).scroll(function(){
@@ -28,6 +23,7 @@ $(function(){
   }
   fixHeader();
 
+  // mobile navigation
   $(".mobileMenu").click(function(){
     $(this).$toggleClass("on");
     if($(this).hasClass("on")){
@@ -40,3 +36,15 @@ $(function(){
   });
 });
   
+  // navigation about click
+  const loca = $(location).attr('href').split('#')[1];
+  console.log(loca)
+  if(loca == 'about'){
+    const aboutOff = $(".process").offset().top;
+    $("html, body").animate({scrollTop:aboutOff}, 1000, 'easeInQuint');
+  }
+
+  $("header .gnb li.aboutGnb").click(function(){
+    const aboutOff = $(".process").offset().top;
+    $("html, body").animate({scrollTop:aboutOff}, 1000, 'easeInQuint');
+  });

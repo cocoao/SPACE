@@ -22,6 +22,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="/space/js/custom.js" defer></script>
+
 </head>
 <body>
   <div class="wrap">
@@ -34,18 +35,18 @@
             <h2>Login</h2>
         </div><!-- end of common title -->
         <div class="loginFormBox">
-          <form action="#" method="post" name="loginForm">
+          <form action="/space/php_process/login/login.php" method="post" name="loginForm">
             <p class="inputBox idInputBox">
               <label for="id">ID</label>
-              <input type="text" name="id" placeholder="Your ID" class="columnTitle" id="id">
+              <input type="text" name="loginId" placeholder="Your ID" class="columnTitle" id="loginId">
             </p>
             <p class="inputBox passInputBox">
               <label for="pass">PASSWORD</label>
-              <input type="password" name="pass" placeholder="Your Password" class="columnTitle" id="pass">
+              <input type="password" name="loginPass" placeholder="Your Password" class="columnTitle" id="loginPass">
             </p>
             <div class="formBtns">
               <button type="button" class="resetBtn" onclick="location.href='/space/pages/login/join_form.php'">JOIN</button>
-              <button type="button" class="sendBtn">LOGIN</button>
+              <button type="button" class="loginBtn">LOGIN</button>
             </div>
           </form>
         </div>
@@ -64,5 +65,34 @@
     ?>
 
   </div><!-- end of wrap -->
+
+  <script>
+      
+    const loginBtn = document.querySelector('.loginBtn');
+    loginBtn.addEventListener('click', loginCheck);
+
+    function loginCheck(){
+      if(!document.loginForm.loginId.value){
+        alert('아이디를 입력해주세요.');
+        document.loginForm.loginId.focus();
+        return;
+      }
+      if(!document.loginForm.loginPass.value){
+        alert('비밀번호를 입력해주세요.');
+        document.loginForm.loginPass.focus();
+        return;
+      }
+      document.loginForm.submit();
+    }
+
+    (function(){
+      document.addEventListener('keydown',function(e){
+        const keyCode=e.keyCode;
+        if(keyCode==13){
+          loginCheck();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

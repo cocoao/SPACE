@@ -2,3 +2,4 @@ color: #644600; rgba(100,70,0,0.3)
 #b2a89e
 #e8e8e8
 
+include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';

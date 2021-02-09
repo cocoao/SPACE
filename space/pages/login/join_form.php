@@ -21,8 +21,8 @@
   <!-- jQuery link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="/space/js/custom.js"></script>
-  <script src="/space/js/join.js"></script>
+  <script src="/space/js/custom.js" defer></script>
+  <script src="/space/js/join.js" defer></script>
 
 </head>
 <body>
@@ -40,6 +40,7 @@
             <p class="inputBox idInputBox">
               <label for="id">ID</label>
               <input type="text" name="id" placeholder="Your ID" class="columnTitle" id="id">
+              <button type="button" name="button" class="idCheck" id="idCheck">Check</button>
             </p>
             <p class="inputBox nameInputBox">
               <label for="name">NAME</label>
@@ -58,17 +59,17 @@
               <input type="text" name="email1" placeholder="Your Email ID" class="email1" id="email1">
               <span>@</span>
               <input type="text" name="email2" placeholder="Your Email Address" class="email2" id="email2">
-              <select name="selectEmail">
-                <option value="" disabled selected>메일선택</option>
+              <select name="selectEmail" id="selectEmail">
+                <option value="" selected>직접입력</option>
                 <option value="naver.com">naver.com</option>
                 <option value="gmail.com">gmail.com</option>
                 <option value="hanmail.net">hanmail.net</option>
-                <option value="directly" selected>직접입력</option>
+                <option value="hanmail.net">hatmail.com</option>
               </select>
             </p>
             <div class="formBtns">
               <button type="button" class="resetBtn">RESET</button>
-              <button type="submit" class="sendBtn">SEND</button>
+              <button type="button" class="sendBtn">SEND</button>
             </div>
           </form>
         </div>

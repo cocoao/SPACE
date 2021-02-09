@@ -5,11 +5,15 @@
 .joinBox .inputBox label,.loginFormBox .inputBox label{background: #644600; color: #fff; width: 25%; height: 40px; display: flex; justify-content: center; align-items: center;}
 .joinBox .inputBox input,.loginFormBox .inputBox input{border: 1px solid #644600; width: 75%; padding: 10px;}
 
-.formBtns{margin-top: 20px; display: flex; justify-content: space-between; border-top: 1px dotted #644600; padding-top: 20px;}
+.formBtns{border-top: 1px dotted #644600; padding-top: 20px;}
+/* .formBtns{margin-top: 20px; display: flex; justify-content: space-between; border-top: 1px dotted #644600; padding-top: 20px;}
 .formBtns button{width: 49.5%; outline: 0;border: 1px solid #644600; padding: 8px 0; color: #644600; cursor: pointer;}
-.formBtns button:hover{background: #644600; color: #fff;}
+.formBtns button:hover{background: #644600; color: #fff;} */
 
 /* join form style */
+.joinBox .idInputBox input{width: 60%;}
+.joinBox .idInputBox .idCheck{width: 14.5%;margin-left: 0.5%; outline: 0; _background: #b2a89e; border: 1px solid #644600; color: #644600; text-transform: uppercase; cursor: pointer;}
+.joinBox .idInputBox .idCheck:hover{background: #644600; color: #fff;}
 .joinBox .inputBox input.email1{width: 25%;}
 .joinBox .inputBox input.email2{width: 32%;}
 .joinBox .inputBox span{width: 3%; display: flex; justify-content: center; align-items: center;}

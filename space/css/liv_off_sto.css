@@ -1,0 +1,33 @@
+/* main interior page style */
+.inBoxes{width: 100%; height: auto; padding-top: 40px; display: flex; flex-wrap: wrap; _justify-content: space-between;}
+.inBox{width: calc(25% - 10px); height: auto; border: 1px solid #644600; padding-bottom: 25%; position: relative; margin:5px;}
+.inBox .imgBox{width: 100%; height:100%; position: absolute; overflow: hidden; border: 5px solid #fff; display: flex; justify-content: center; align-items: center;}
+.inBox img{width: 100%; top:50%; left: 50%; transform: translate(-50%, -50%); position: absolute;}
+.inBox:hover .viewBtn,.inBox:hover .hoverWhite{opacity: 1;}
+
+.inBtns{justify-content: center;}
+.inBtns button{width: 20%;}
+.inBtns button:nth-child(2){margin: 0 5px;}
+
+/* upload page style */
+.uploadBox .uploadForm{width: 100%; height: auto; margin: 40px auto; border: 1px solid #644600; padding: 10px;}
+.uploadBox .uploadForm .inputUnit{width:100%; height:auto; display: flex; justify-content: space-between;}
+.uploadBox .uploadForm .inputUnit:nth-child(2){margin: 10px 0;}
+.uploadBox .uploadForm p{width: calc(50% - 5px); height: auto; display: flex;}
+.uploadBox .uploadForm label{width: 25%; background: #644600; color: #fff; padding: 10px; text-align: center;}
+.uploadBox .uploadForm input{padding: 10px; border: 1px solid #644600; width: 75%;}
+.uploadBox .uploadForm textarea{width: 100%; height: 200px; border: 1px solid #644600; resize: none; padding: 10px;}
+
+.imgUploadBox{width: 100%; height: auto; display: flex; justify-content: space-between;}
+.imgUploadBox .imgUpload{width: 25%; margin-left: 5px;}
+.imgUploadBox .imgUpload:first-child{margin-left: 0;}
+.imgUploadBox .imgUpload input.uploadName{width: 100%;}
+.imgUploadBox .imgUpload label{width: 100%; display: block; padding: 5px; margin: 0 0 5px 0;}
+
+.inputControll input[type="file"]{position: absolute; width: 1px; height: 1px; page-break-after: 0; margin: -1; overflow: hidden; padding: 0; margin: 0; border: 0;}
+.imgBox{width: 100%; height:auto; border: 1px solid #644600; padding: 5px;}
+.imgBox img{width: 100%;}
+
+.uploadBox .btns{_border-top: 1px dotted #644600; padding-top: 0; justify-content:center; margin-top:0;}
+.uploadBox .btns a{width: 30%; text-align: center; margin: 0 5px;}
+.uploadHidden{height: auto;}

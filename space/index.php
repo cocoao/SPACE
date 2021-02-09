@@ -32,7 +32,7 @@
        <div class="title mainTitle">
           <h2>SPACE DESIGN</h2>
           <div class="linkBox">
-            <hr><a href="#">view all design</a>
+            <hr><a href="/space/pages/living/liv.php">view all design</a>
           </div>
         </div><!-- end of common title -->
         <div class="introBox">
@@ -206,10 +206,63 @@
     <?php
     include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
     ?> 
+
+    <section class="contents contact">
+      <div class="center clear">
+        <div class="title">
+          <h2>Contact</h2>
+        </div><!-- end of common title -->
+        <div class="contactBox">
+        <form action="/space/php_process/pages/contact_insert.php" method="post" name="contactForm" class="contactForm">
+          <p class="NameMail">
+            <input type="text" name="contName" placeholder="NAME">
+            <input type="text" name="contEmail" placeholder="EMAIL">
+          </p>
+          <p class="subject">
+            <input type="text" name="contTit" placeholder="SUBJECT">
+          </p>
+          <p class="message">
+            <textarea name="contTxt" placeholder="MESSAGE"></textarea>
+          </p>
+          <a href="/space/index.php" class="contSend">SEND MESSAGE</a>
+        </form>
+        </div>
+      </div>
+    </section><!-- end of about section -->
+    
     <?php
     include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
     ?>
 
   </div><!-- end of wrap -->
+  <script>
+  let contSendBtn = document.querySelector(".contSend");
+  contSendBtn.addEventListener('click',contSend);
+
+  function contSend(e){
+    e.preventDefault();
+    if(!document.contactForm.contName.value){
+      alert("이름을 입력해주세요.");
+      document.contactForm.contName.focus();
+      return;
+    }
+    if(!document.contactForm.contEmail.value){
+      alert("이메일을 입력해주세요.");
+      document.contactForm.contEmail.focus();
+      return;
+    }
+    if(!document.contactForm.contTit.value){
+      alert("제목을 입력해주세요.");
+      document.contactForm.contTit.focus();
+      return;
+    }
+    if(!document.contactForm.contTxt.value){
+      alert("내용을 입력해주세요.");
+      document.contactForm.contTxt.focus();
+      return;
+    }
+    document.contactForm.submit();
+  }
+  </script>
 </body>
 </html>

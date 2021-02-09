@@ -18,14 +18,27 @@ input:focus,textarea:focus{background: #eee;}
 
 /* general common section style */
 .contents{padding: 50px 0;}
-.contents .mainTitle{float: left;}
-.contents .title{text-transform: uppercase; width: auto; height: auto; text-align: center;}
+.contents .title{text-transform: uppercase; width: auto; height: auto; text-align: center; display: flex; flex-direction: column;justify-content: center; align-items: center;}
 .contents .title h2{font-size: 50px; font-weight: 300; color: #644600;}
-.contents .title .linkBox{width: 100%; display: flex; align-items: center; position: relative; height: 15px;}
-.contents .title .linkBox hr{border:0; border-bottom: 1px solid #999; width: 100%; display: inline-block; margin: 0 5px 0 0; position: absolute;}
-.contents .title .linkBox a{font-size: 14px; font-weight: 300; color: #888; text-transform: uppercase; display: inline-block; text-align: right; background: #fff; padding: 0 5px;position: absolute; right: 0;}
+.contents .title .linkBox{width: 30%; display: flex; align-items: center; justify-content: center; height: 15px;}
+.contents .title .linkBox hr{border:0; border-bottom: 1px solid #999; width: 100%; margin: 0 5px 0 0;}
+.contents .title .linkBox a{font-size: 14px; font-weight: 300; color: #888; text-transform: uppercase; text-align: center; background: #fff; padding: 0 5px;position: absolute;}
+
+.contents .mainTitle{float: left;}
+.contents .mainTitle .linkBox{width: 100%; display: flex; align-items: center; position: relative; height: 15px;}
+.contents .mainTitle .linkBox hr{border:0; border-bottom: 1px solid #999; width: 100%; display: inline-block; margin: 0 5px 0 0; position: absolute;}
+.contents .mainTitle .linkBox a{font-size: 14px; font-weight: 300; color: #888; text-transform: uppercase; display: inline-block; text-align: right; background: #fff; padding: 0 5px;position: absolute; right: 0;}
+
 .contents .title .linkBox a:hover{color: #644600; font-weight: 400;}
-.hoverWhite{width: 100%; background: rgba(255,255,255,0.5);height: 100%; position: absolute; opacity: 0; transition: all 0.4s; padding: 0 10px 10px 0;}
+.hoverWhite{width: 100%; background: rgba(255,255,255,0.5);height: 100%; position: absolute; opacity: 0; transition: all 0.4s; padding: 0 10px 10px 0;z-index: 1;}
+
+/* general common btns style */
+.viewBtn{height: auto; padding:5px 20px; border: 1px solid #644600; margin-top: 20px; text-transform: uppercase; color: #644600; font-weight: 500; font-size: 12px;}
+.viewBtn:hover{background: #644600; color: #fff;}
+.viewBtn{background: #644600; color: #fff; opacity: 0; transition: all 0.4s; position: absolute; z-index: 5;}
+.formBtns, .btns{margin-top: 20px; display: flex; justify-content: space-between; padding-top: 30px;}
+.formBtns button,.btns button,.btns a{width: 49.5%; outline: 0;border: 1px solid #644600; padding: 8px 0; color: #644600; cursor: pointer; text-transform: uppercase;}
+.formBtns button:hover,.btns button:hover,.btns a:hover{background: #644600; color: #fff;}
 
 /* top main style */
 header{width: 90%; height: auto; margin: auto;}
@@ -71,10 +84,8 @@ header .mobileMenu i{font-size: 22px; color: #fff; display: none;}
 .interior .interiorTxt h4{text-transform: uppercase; color: #644600; font-size: 20px; font-weight: 300;}
 .interior .interiorTxt em{font-style: normal; font-weight: 500;}
 .interior .interiorTxt p{line-height: 2;}
-.interior .viewBtn{height: auto; padding:5px 20px; border: 1px solid #644600; margin-top: 20px; text-transform: uppercase; color: #644600; font-weight: 500; font-size: 12px;}
-.interior .viewBtn:hover{background: #644600; color: #fff;}
+
 .interior .interiorImg{position: relative; width: 100%; border: 10px solid #e8e8e8; outline: 1px solid #644600;}
-.interior .interiorImg .viewBtn{background: #644600; color: #fff; opacity: 0; transition: all 0.4s; position: absolute; z-index: 1;}
 .interior .interiorImg:hover .viewBtn,.interior .interiorImg:hover .hoverWhite{opacity: 1;}
 .interior .interiorBox img{width: 100%;}
 
@@ -106,6 +117,17 @@ header .mobileMenu i{font-size: 22px; color: #fff; display: none;}
 .about .sns ul{display: flex; justify-content: space-evenly; align-items: center;}
 .about .sns ul i.fa{color: #644600; width: 30px; height: 30px; margin: 5px; border: 1px solid #644600; display: flex; align-items: center; justify-content: center;}
 .about .sns ul i.fa:hover{background: #644600; color: #fff;}
+
+/* contact style */
+.contactBox{width: 80%; height: auto;margin: 30px auto 0; border: 1px solid #644600; padding: 10px;}
+.contactBox .NameMail{display: flex; justify-content: space-between;}
+.contactBox input{padding: 10px; width: calc(50% - 5px); border: 1px solid #644600;}
+.contactBox .subject{margin: 10px 0;}
+.contactBox .subject input{width: 100%;}
+.contactBox .message{padding-bottom: 10px; border-bottom: 1px dotted #644600;}
+.contactBox textarea{width: 100%; height: 150px; border: 1px solid #644600; outline: 0; resize: none;padding: 10px;}
+.contactBox .contSend{width: 100%; padding: 10px;border: 1px solid #644600; display: inline-block; text-align: center;margin-top: 10px; color: #644600;}
+.contactBox .contSend:hover{background: #644600; color: #fff;}
 
 /* footer style */
 footer{background: #644600; width: 100%; height: auto;}
