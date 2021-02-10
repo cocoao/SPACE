@@ -92,6 +92,18 @@
   .joinBox .inputBox input.email2{width: 40%;}
   .joinBox .inputBox span{width: 5%}
   .joinBox .inputBox select{width: 25%}
+
+  /* main interior page style */
+  .inBox{width: calc(50% - 10px); padding-bottom: 50%;}
+  .inBtns button{width: 49.5%;}
+
+  .uploadBox .uploadForm p{width: 100%; margin-bottom: 5px; }
+  .uploadBox .uploadForm .inputUnit{flex-wrap: wrap;}
+  .uploadBox .uploadForm .inputUnit:nth-child(2){margin: 0;}
+  .imgUploadBox{flex-wrap: wrap;}
+  .imgUploadBox .imgUpload{width: 49.5%;}
+  .imgUploadBox .imgUpload:nth-child(1),.imgUploadBox .imgUpload:nth-child(2){margin-bottom: 10px;}
+  .imgUploadBox .imgUpload:nth-child(3){margin-left: 0;}
 }
 
 @media screen and (max-width:480px){

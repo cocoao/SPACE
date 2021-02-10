@@ -25,8 +25,6 @@
   $sub3_tmp_name = $_FILES['sub3']['tmp_name'];
   $sub3_error = $_FILES['sub3']['error'];
 
-  echo $liv_title, $liv_type, $liv_client, $liv_term,$liv_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
-
   if($main_name && !$main_error){
     $uploaded_main_file = $img_upload_dir.$main_name;
     if(!move_uploaded_file($main_tmp_name,$uploaded_main_file)){
@@ -85,13 +83,22 @@
 
   include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
 
-  $sql = "insert into SPACE_LIV(SPACE_LIV_tit, SPACE_LIV_type, SPACE_LIV_cli, SPACE_LIV_term, SPACE_LIV_desc, SPACE_LIV_img1, SPACE_LIV_img2, SPACE_LIV_img3, SPACE_LIV_img4) values ('$liv_title', '$liv_type, '$liv_client', '$liv_term','$liv_desc','$main_name','$sub1_name','$sub2_name','$sub3_name')";
+  $sql = "INSERT INTO SPACE_LIV(SPACE_LIV_tit, SPACE_LIV_type, SPACE_LIV_cli, SPACE_LIV_term, SPACE_LIV_desc, SPACE_LIV_img1, SPACE_LIV_img2, SPACE_LIV_img3, SPACE_LIV_img4) VALUES ('$liv_title', '$liv_type', '$liv_client', '$liv_term','$liv_desc','$main_name','$sub1_name','$sub2_name','$sub3_name')";
 
   mysqli_query($dbConn,$sql);
 
-  // echo "
-  // <script>
-  //     location.href='/space/pages/living/liv.php';
-  // </script>
-  // "
+  // if($dbConn) {
+  //   echo "
+  //   <script>
+  //       alert('connected');
+  //   </script>
+  //   ";
+  // }
+
+  // echo $liv_title, $liv_type, $liv_client, $liv_term,$liv_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
+  echo "
+  <script>
+      location.href='/space/pages/living/liv.php';
+  </script>
+  "
 ?>

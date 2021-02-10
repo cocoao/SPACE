@@ -14,9 +14,9 @@
 
   <!-- css link -->
   <link rel="stylesheet" href="/space/css/style.css">
+  <link rel="stylesheet" href="/space/css/liv_off_sto.css">
   <link rel="stylesheet" href="/space/css/animation.css">
   <link rel="stylesheet" href="/space/css/media.css">
-  <link rel="stylesheet" href="/space/css/liv_off_sto.css">
 
   <!-- jQuery link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -66,7 +66,7 @@
             <div class="imgUploadBox">
               <div class="imgUpload">
                 <div class="inputControll">
-                  <input class="uploadName" placeholder="Main image">
+                  <input class="uploadName" placeholder="Main image" id="uploadName1">
                   <label for="mainImage">SELECT IMAGE</label>
                   <input type="file" id="mainImage" name="main" class="uploadHidden">
                 </div>
@@ -76,7 +76,7 @@
               </div><!-- end of uploadBox -->
               <div class="imgUpload">
                 <div class="inputControll">
-                  <input class="uploadName" placeholder="Sub image">
+                  <input class="uploadName" placeholder="Sub image" id="uploadName2">
                   <label for="subImage1">SELECT IMAGE</label>
                   <input type="file" id="subImage1" name="sub1"class="uploadHidden">
                 </div>
@@ -86,7 +86,7 @@
               </div><!-- end of uploadBox -->
               <div class="imgUpload">
                 <div class="inputControll">
-                  <input class="uploadName" placeholder="Sub image">
+                  <input class="uploadName" placeholder="Sub image" id="uploadName3">
                   <label for="subImage2">SELECT IMAGE</label>
                   <input type="file" id="subImage2" name="sub2"class="uploadHidden">
                 </div>
@@ -96,7 +96,7 @@
               </div><!-- end of uploadBox -->
               <div class="imgUpload">
                 <div class="inputControll">
-                  <input class="uploadName" placeholder="Sub image">
+                  <input class="uploadName" placeholder="Sub image" id="uploadName4">
                   <label for="subImage3">SELECT IMAGE</label>
                   <input type="file" id="subImage3" name="sub3"class="uploadHidden">
                 </div>

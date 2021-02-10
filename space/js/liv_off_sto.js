@@ -137,6 +137,14 @@ function resetInput(e){
   document.uploadForm.sub1.value='';
   document.uploadForm.sub2.value='';
   document.uploadForm.sub3.value='';
+  document.getElementById("uploadName1").value = "";
+  document.getElementById("uploadName2").value = "";
+  document.getElementById("uploadName3").value = "";
+  document.getElementById("uploadName4").value = "";
+  $('#main').attr('src', '');
+  $('#sub1').attr('src', '');
+  $('#sub2').attr('src', '');
+  $('#sub3').attr('src', '');
 
   document.uploadForm.title.focus();
   return;
