@@ -10,6 +10,10 @@
   /* login, join style */
   .loginFormBox,.login .findInfo{width: 60%;}
   .joinBox{width: 80%;}
+
+  .detailContents{width: 100%; margin: auto;}
+  .imgNav a{width: 40px; height: 40px;}
+  .offSub .offImgBox{height: 70px;}
 }
 
 @media screen and (max-width:900px){
@@ -101,9 +105,14 @@
   .uploadBox .uploadForm .inputUnit{flex-wrap: wrap;}
   .uploadBox .uploadForm .inputUnit:nth-child(2){margin: 0;}
   .imgUploadBox{flex-wrap: wrap;}
-  .imgUploadBox .imgUpload{width: 49.5%;}
+  .imgUploadBox .imgUpload{width: calc(50% - 3px);}
   .imgUploadBox .imgUpload:nth-child(1),.imgUploadBox .imgUpload:nth-child(2){margin-bottom: 10px;}
   .imgUploadBox .imgUpload:nth-child(3){margin-left: 0;}
+
+  .detailContents{width: 80%;}
+  .leftBox{width: 100%;}
+  .rightBox{width: calc(100% - 70px); margin: 30px 0 0 80px; padding-right: 13px;}
+  .subMenu{width: 100%;}
 }
 
 @media screen and (max-width:480px){
@@ -135,4 +144,8 @@
   .joinBox .inputBox input.email2{width: 42%;}
   .joinBox .inputBox span{width: 5%; font-size: 11px;}
   .joinBox .inputBox select{width: 21%;}
+
+  .detailContents{width: 100%;}
+
+  .imgNav a{width: 30px; height: 30px; margin-left: 10px;}
 }

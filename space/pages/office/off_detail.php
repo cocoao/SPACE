@@ -1,21 +1,21 @@
 <?php
-$liv__detail_num=$_GET['num'];
+$off__detail_num=$_GET['num'];
 
 include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
-$sql="select* from SPACE_LIV where SPACE_LIV_num=$liv__detail_num";
+$sql="select* from SPACE_OFF where SPACE_OFF_num=$off__detail_num";
 
 $result=mysqli_query($dbConn,$sql);
 $row_result=mysqli_fetch_array($result);
 
-$liv__detail_tit=$row_result['SPACE_LIV_tit'];
-$liv__detail_type=$row_result['SPACE_LIV_type'];
-$liv__detail_cli=$row_result['SPACE_LIV_cli'];
-$liv__detail_term=$row_result['SPACE_LIV_term'];
-$liv__detail_desc=$row_result['SPACE_LIV_desc'];
-$liv__detail_img1=$row_result['SPACE_LIV_img1'];
-$liv__detail_img2=$row_result['SPACE_LIV_img2'];
-$liv__detail_img3=$row_result['SPACE_LIV_img3'];
-$liv__detail_img4=$row_result['SPACE_LIV_img4'];
+$off__detail_tit=$row_result['SPACE_OFF_tit'];
+$off__detail_type=$row_result['SPACE_OFF_type'];
+$off__detail_cli=$row_result['SPACE_OFF_cli'];
+$off__detail_term=$row_result['SPACE_OFF_term'];
+$off__detail_desc=$row_result['SPACE_OFF_desc'];
+$off__detail_img1=$row_result['SPACE_OFF_img1'];
+$off__detail_img2=$row_result['SPACE_OFF_img2'];
+$off__detail_img3=$row_result['SPACE_OFF_img3'];
+$off__detail_img4=$row_result['SPACE_OFF_img4'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,43 +49,43 @@ $liv__detail_img4=$row_result['SPACE_LIV_img4'];
     include $_SERVER["DOCUMENT_ROOT"]."/space/include/header.php"
     ?>
 
-    <section class="contents livDetail detailContents">
+    <section class="contents offDetail detailContents">
       <div class="center clear">
         <div class="title">
-          <h2><?=$liv__detail_tit?></h2>
+          <h2><?=$off__detail_tit?></h2>
         </div><!-- end of common title -->
         <div class="detailBox">
           <div class="leftBox clear">
             <div class="imgNav">
               <a href="#" class="active">
                 <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img1?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img1?>" alt="office1">
               </a>
               <a href="#">
                 <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img2?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img2?>" alt="office1">
               </a>
               <a href="#">
                 <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img3?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img3?>" alt="office1">
               </a>
               <a href="#">
                 <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img4?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img4?>" alt="office1">
               </a>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">
-                <img src="/space/data/living/<?=$liv__detail_img1?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img1?>" alt="office1">
               </div>
               <div class="imgBox">
-                <img src="/space/data/living/<?=$liv__detail_img2?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img2?>" alt="office1">
               </div>
               <div class="imgBox">
-                <img src="/space/data/living/<?=$liv__detail_img3?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img3?>" alt="office1">
               </div>
               <div class="imgBox">
-                <img src="/space/data/living/<?=$liv__detail_img4?>" alt="living1">
+                <img src="/space/data/office/<?=$off__detail_img4?>" alt="office1">
               </div>
             </div>
           </div><!-- end of left box -->
@@ -104,15 +104,15 @@ $liv__detail_img4=$row_result['SPACE_LIV_img4'];
                 <span> | </span>
               </div>
               <div class="rightTxt">
-                <p><?=$liv__detail_type?></p>
-                <p><?=$liv__detail_cli?></p>
-                <p><?=$liv__detail_term?></p>
-                <p><?=$liv__detail_desc?></p>
+                <p><?=$off__detail_type?></p>
+                <p><?=$off__detail_cli?></p>
+                <p><?=$off__detail_term?></p>
+                <p><?=$off__detail_desc?></p>
               </div>
             </div>
 
             <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/space/include/off_side.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/space/include/liv_side.php";
             include $_SERVER["DOCUMENT_ROOT"]."/space/include/sto_side.php";
             ?> 
 

@@ -20,7 +20,7 @@
   <!-- jQuery link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="/space/js/custom.js" defer></script>
+  <script src="/space/js/custom.js"></script>
 </head>
 <body>
   <div class="wrap">

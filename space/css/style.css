@@ -30,7 +30,7 @@ input:focus,textarea:focus{background: #eee;}
 .contents .mainTitle .linkBox a{font-size: 14px; font-weight: 300; color: #888; text-transform: uppercase; display: inline-block; text-align: right; background: #fff; padding: 0 5px;position: absolute; right: 0;}
 
 .contents .title .linkBox a:hover{color: #644600; font-weight: 400;}
-.hoverWhite{width: 100%; background: rgba(255,255,255,0.5);height: 100%; position: absolute; opacity: 0; transition: all 0.4s; padding: 0 10px 10px 0;z-index: 1;}
+.hoverWhite{width: 100%; background: rgba(255,255,255,0.5); height: 100%; position: absolute; opacity: 0; transition: all 0.4s; padding: 0 10px 10px 0;z-index: 1;}
 
 /* general common btns style */
 .viewBtn{height: auto; padding:5px 20px; border: 1px solid #644600; margin-top: 20px; text-transform: uppercase; color: #644600; font-weight: 500; font-size: 12px;}

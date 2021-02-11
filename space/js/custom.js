@@ -25,7 +25,7 @@ $(function(){
 
   // mobile navigation
   $(".mobileMenu").click(function(){
-    $(this).$toggleClass("on");
+    $(this).toggleClass("on");
     if($(this).hasClass("on")){
       $(this).find("i").attr("class","fa fa-times");
       $(this).prev("ul").slideDown("fest");

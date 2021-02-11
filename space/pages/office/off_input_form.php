@@ -30,16 +30,16 @@
     <?php
     include $_SERVER["DOCUMENT_ROOT"]."/space/include/header.php"
     ?>
-    <section class="contents liv">
+    <section class="contents off">
       <div class="center clear">
         <div class="title">
-          <h2>Living Space</h2>
+          <h2>Office Space</h2>
           <div class="linkBox">
-            <hr><a href="/space/pages/living/liv.php">view all design</a>
+            <hr><a href="/space/pages/office/off.php">view all design</a>
           </div>
         </div><!-- end of common title -->
         <div class="uploadBox">
-          <form action="/space/php_process/pages/liv_insert.php" method="post" name="uploadForm" class="uploadForm" enctype="multipart/form-data">
+          <form action="/space/php_process/pages/off_insert.php" method="post" name="uploadForm" class="uploadForm" enctype="multipart/form-data">
             <div class="inputUnit">
               <p class="title_input">
                 <label for="title">Title</label>
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-    </section><!-- end of liv section -->
+    </section><!-- end of off section -->
 
     <?php
     include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"

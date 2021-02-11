@@ -2,7 +2,7 @@
 .inBoxes{width: 100%; height: auto; padding-top: 40px; display: flex; flex-wrap: wrap; _justify-content: space-between;}
 .inBox{width: calc(25% - 10px); height: auto; border: 1px solid #644600; padding-bottom: 25%; position: relative; margin:5px;}
 .inBox .imgBox{width: 100%; height:100%; position: absolute; overflow: hidden; border: 5px solid #fff; display: flex; justify-content: center; align-items: center;}
-.inBox img{width: 100%; top:50%; left: 50%; transform: translate(-50%, -50%); position: absolute;}
+.inBox img{width: 100%; top:50%; left: 50%; transform: translate(-50%, -50%); position: absolute; _object-fit:cover}
 .inBox:hover .viewBtn,.inBox:hover .hoverWhite{opacity: 1;}
 .inBox:hover,.inBox:hover .imgBox{border-radius: 15px 0;}
 .inBtns{justify-content: center;}
@@ -25,9 +25,49 @@
 .imgUploadBox .imgUpload label{width: 100%; display: block; padding: 5px; margin: 0 0 5px 0;}
 
 .inputControll input[type="file"]{position: absolute; width: 1px; height: 1px; page-break-after: 0; margin: -1; overflow: hidden; padding: 0; margin: 0; border: 0;}
-.imgBox{width: 100%; height:auto; border: 1px solid #644600; padding: 5px;}
-.imgBox img{width: 100%;}
+.formImgBox{width: 100%; height:auto; border: 1px solid #644600; padding: 5px;}
+.formImgBox img{width: 100%;}
 
 .uploadBox .btns{_border-top: 1px dotted #644600; padding-top: 0; justify-content:center; margin-top:0;}
 .uploadBox .btns a{width: 30%; text-align: center; margin: 0 5px;}
 .uploadHidden{height: auto;}
+
+/* detail page style */
+.detailContents{width: 85%; margin: auto;}
+.detailBox{padding-top: 40px;}
+
+/* left box */
+.leftBox{width: 60%; height: auto; display: flex; justify-content: space-between; float: left;}
+.imgNav{width: 15%; height: auto; _border: 1px solid #644600; padding: 5px; display: flex; flex-direction: column;}
+.imgNav a{width:50px; margin-bottom: 8px; height: 50px; overflow: hidden; position: relative; display: flex; _justify-content: flex-start; _padding-bottom: 25%; border-radius: 50%;}
+.imgNav a:last-child{margin-bottom: 0;}
+.imgNav .hoverWhite{width: 100%; height: 100%; z-index: 1; background: rgba(100,70,0,0.5);}
+.imgNav a:hover .hoverWhite,.imgNav a.active .hoverWhite{opacity: 1;}
+.imgNav a img{width: 100%; object-fit: cover;}
+
+.imgBoxes{width: calc(100% - 80px); height: auto ;border: 1px solid #644600; padding: 5px;}
+.imgBox{width: 100%;}
+.imgBox img{width: 100%;}
+
+/* right box */
+.rightBox{width: 35%; height: auto; float: right;}
+.txtBox{width: 100%; display: flex; margin-bottom: 30px;}
+.leftTxt{width: 23%;}
+.leftTxt p{padding-bottom: 10px; font-size: 14px; text-transform: uppercase; color: #644600;}
+.lineBox{color: #644600;display: flex; flex-direction: column;}
+.lineBox span{padding-bottom: 12px; font-size: 12px;}
+.rightTxt{margin-left: 10px;}
+.rightTxt p{font-size: 12px; padding-bottom: 12.5px;}
+
+.subMenu{padding-top: 30px;}
+.subBox{width: 100%;}
+.subBox .subTit{display: flex; justify-content: space-between; padding-bottom: 5px;}
+.subBox .subTit h3{font-size: 14px; text-transform: uppercase; color: #644600; font-weight: 300;}
+.subBox .subTit a{padding: 0 5px; text-transform: uppercase; color: #644600; font-weight: 600; font-size: 12px;}
+.subBox hr{color: #644600;}
+.subBox .subImgBoxes{width: 100%; display: flex; justify-content: space-between; margin-top: 10px;}
+.subBox .subImgBox{width: 32%; height: 90px; overflow: hidden; position: relative;}
+.subBox .subImgBox img{width: 100%; position: absolute; top: 50%; transform: translateY(-50%);}
+.subBox .subImgBox a{width: 100%; height: auto;}
+.subBox .subImgBox:hover .hoverWhite{opacity: 1;}
+.subBox .subImgBox:hover{border-radius: 5px 0;}
