@@ -11,7 +11,9 @@ $liv__detail_tit=$row_result['SPACE_LIV_tit'];
 $liv__detail_type=$row_result['SPACE_LIV_type'];
 $liv__detail_cli=$row_result['SPACE_LIV_cli'];
 $liv__detail_term=$row_result['SPACE_LIV_term'];
-$liv__detail_desc=$row_result['SPACE_LIV_desc'];
+$liv__detail_desc=nl2br($row_result['SPACE_LIV_desc']);
+$liv__detail_desc = addslashes($liv__detail_desc);
+
 $liv__detail_img1=$row_result['SPACE_LIV_img1'];
 $liv__detail_img2=$row_result['SPACE_LIV_img2'];
 $liv__detail_img3=$row_result['SPACE_LIV_img3'];
@@ -56,23 +58,29 @@ $liv__detail_img4=$row_result['SPACE_LIV_img4'];
         </div><!-- end of common title -->
         <div class="detailBox">
           <div class="leftBox clear">
-            <div class="imgNav">
-              <a href="#" class="active">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img1?>" alt="living1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img2?>" alt="living1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img3?>" alt="living1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/living/<?=$liv__detail_img4?>" alt="living1">
-              </a>
+            <div class="sideBox">
+              <div class="imgNav">
+                <a href="#" class="active">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/living/<?=$liv__detail_img1?>" alt="living1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/living/<?=$liv__detail_img2?>" alt="living1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/living/<?=$liv__detail_img3?>" alt="living1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/living/<?=$liv__detail_img4?>" alt="living1">
+                </a>
+              </div>
+              <div class="btns">
+                <a href="/space/pages/admin/update_form.php?key=liv_update_form&num=<?=$liv__detail_num?>">수정</a>
+                <a href="/space/php_process/pages/liv_detail_delete.php?num=<?=$liv__detail_num?>">삭제</a>
+             </div>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">

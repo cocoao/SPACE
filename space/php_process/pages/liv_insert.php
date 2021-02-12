@@ -4,8 +4,7 @@
   $liv_type = $_REQUEST['type'];
   $liv_client = $_REQUEST['client'];
   $liv_term = $_REQUEST['term'];
-  $liv_desc = nl2br($_REQUEST['desc']);
-  $liv_desc = addslashes($liv_desc);
+  $liv_desc = $_REQUEST['desc'];
 
   $img_upload_dir = $_SERVER['DOCUMENT_ROOT'].'/space/data/living/';
 

@@ -11,7 +11,10 @@ $off__detail_tit=$row_result['SPACE_OFF_tit'];
 $off__detail_type=$row_result['SPACE_OFF_type'];
 $off__detail_cli=$row_result['SPACE_OFF_cli'];
 $off__detail_term=$row_result['SPACE_OFF_term'];
-$off__detail_desc=$row_result['SPACE_OFF_desc'];
+
+$off__detail_desc=nl2br($row_result['SPACE_OFF_desc']);
+$off__detail_desc = addslashes($off__detail_desc);
+
 $off__detail_img1=$row_result['SPACE_OFF_img1'];
 $off__detail_img2=$row_result['SPACE_OFF_img2'];
 $off__detail_img3=$row_result['SPACE_OFF_img3'];
@@ -56,23 +59,29 @@ $off__detail_img4=$row_result['SPACE_OFF_img4'];
         </div><!-- end of common title -->
         <div class="detailBox">
           <div class="leftBox clear">
-            <div class="imgNav">
-              <a href="#" class="active">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/office/<?=$off__detail_img1?>" alt="office1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/office/<?=$off__detail_img2?>" alt="office1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/office/<?=$off__detail_img3?>" alt="office1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/office/<?=$off__detail_img4?>" alt="office1">
-              </a>
+           <div class="sideBox">
+              <div class="imgNav">
+                <a href="#" class="active">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/office/<?=$off__detail_img1?>" alt="office1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/office/<?=$off__detail_img2?>" alt="office1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/office/<?=$off__detail_img3?>" alt="office1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/office/<?=$off__detail_img4?>" alt="office1">
+                </a>
+              </div>
+              <div class="btns">
+                <a href="/space/pages/admin/update_form.php?key=off_update_form&num=<?=$off__detail_num?>">수정</a>
+                <a href="/space/php_process/pages/off_detail_delete.php?num=<?=$off__detail_num?>">삭제</a>
+             </div>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">

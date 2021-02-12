@@ -1,12 +1,15 @@
+<meta charset='utf-8'>
 <?php
-  $off_title = nl2br($_REQUEST['title']);
-  $off_title = addslashes($off_title);
-  $off_type = $_REQUEST['type'];
-  $off_client = $_REQUEST['client'];
-  $off_term = $_REQUEST['term'];
-  $off_desc = $_REQUEST['desc'];
+  $liv_num=$_GET['num'];
 
-  $img_upload_dir = $_SERVER['DOCUMENT_ROOT'].'/space/data/office/';
+  $liv_title = nl2br($_REQUEST['title']);
+  $liv_title = addslashes($liv_title);
+  $liv_type = $_REQUEST['type'];
+  $liv_client = $_REQUEST['client'];
+  $liv_term = $_REQUEST['term'];
+  $liv_desc = $_REQUEST['desc'];
+
+  $img_upload_dir = $_SERVER['DOCUMENT_ROOT'].'/space/data/living/';
 
   $main_name = $_FILES['main']['name'];
   $main_tmp_name = $_FILES['main']['tmp_name'];
@@ -82,22 +85,14 @@
 
   include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
 
-  $sql = "INSERT INTO SPACE_OFF(SPACE_OFF_tit, SPACE_OFF_type, SPACE_OFF_cli, SPACE_OFF_term, SPACE_OFF_desc, SPACE_OFF_img1, SPACE_OFF_img2, SPACE_OFF_img3, SPACE_OFF_img4) VALUES ('$off_title', '$off_type', '$off_client', '$off_term','$off_desc','$main_name','$sub1_name','$sub2_name','$sub3_name')";
+  $sql = "UPDATE SPACE_LIV SET SPACE_LIV_tit='$liv_title', SPACE_LIV_type='$liv_type', SPACE_LIV_cli='$liv_client', SPACE_LIV_term='$liv_term', SPACE_LIV_desc='$liv_desc', SPACE_LIV_img1='$main_name', SPACE_LIV_img2='$sub1_name', SPACE_LIV_img3='$sub2_name', SPACE_LIV_img4='$sub3_name' WHERE SPACE_LIV_num='$liv_num'";
 
   mysqli_query($dbConn,$sql);
 
-  // if($dbConn) {
-  //   echo "
-  //   <script>
-  //       alert('connected');
-  //   </script>
-  //   ";
-  // }
-
-  // echo $off_title, $off_type, $off_client, $off_term,$off_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
   echo "
   <script>
-      location.href='/space/pages/office/off.php';
+      alert('수정이 완료되었습니다.');
+      location.href='/space/pages/living/liv.php';
   </script>
   "
 ?>

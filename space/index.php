@@ -66,33 +66,35 @@
         </div>
       </div>
     </section><!-- end of intro section -->
-
     <section class="contents interior">
       <div class="center clear">
         <div class="title mainTitle">
           <h2>SPACE interior</h2>
         </div><!-- end of common title -->
+
         <div class="interiorBox liv">
           <div class="interiorTxt">
             <h4><em>living</em> design</h4>
             <p>일상에 편안함과 자연을 배치하다.</p>
             <a href="#" class="viewBtn">view more</a>
           </div>
+          <?php
+            include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
+            $sql="select * from SPACE_LIV order by SPACE_LIV_num desc limit 3";
+
+            $result=mysqli_query($dbConn,$sql);
+            while($row=mysqli_fetch_array($result)){
+              $liv_num=$row['SPACE_LIV_num'];
+              $liv_main=$row['SPACE_LIV_img1'];
+          ?>
           <div class="interiorImg">
-            <a href="#" class="viewBtn">view detail</a>
+            <a href="/space/pages/living/liv_detail.php?num=<?=$liv_num?>" class="viewBtn">view detail</a>
             <div class="hoverWhite"></div>
-            <img src="/space/img/L_01_01.jpg" alt="recent living">
+            <img src="/space/data/living/<?=$liv_main?>" alt="recent living">
           </div>
-          <div class="interiorImg">
-            <div class="hoverWhite"></div>
-            <a href="#" class="viewBtn">view detail</a>
-            <img src="/space/img/L_02_01.jpg" alt="recent living">
-          </div>
-          <div class="interiorImg">
-            <div class="hoverWhite"></div>
-            <a href="#" class="viewBtn">view detail</a>
-            <img src="/space/img/L_03_01.jpg" alt="recent living">
-          </div>
+          <?php
+          }
+          ?>
         </div><!-- end of living -->
         <div class="interiorBox off">
           <div class="interiorTxt">
@@ -100,21 +102,22 @@
             <p>삭막한 일과에 생기를 불어넣다.</p>
             <a href="#" class="viewBtn">view more</a>
           </div>
+          <?php
+            $sql="select * from SPACE_OFF order by SPACE_OFF_num desc limit 3";
+
+            $result=mysqli_query($dbConn,$sql);
+            while($row=mysqli_fetch_array($result)){
+              $off_num=$row['SPACE_OFF_num'];
+              $off_main=$row['SPACE_OFF_img1'];
+          ?>
           <div class="interiorImg">
-            <a href="#" class="viewBtn">view detail</a>
+            <a href="/space/pages/office/off_detail.php?num=<?=$off_num?>" class="viewBtn">view detail</a>
             <div class="hoverWhite"></div>
-            <img src="/space/img/L_01_01.jpg" alt="recent living">
+            <img src="/space/data/office/<?=$off_main?>" alt="recent office">
           </div>
-          <div class="interiorImg">
-            <div class="hoverWhite"></div>
-            <a href="#" class="viewBtn">view detail</a>
-            <img src="/space/img/L_02_01.jpg" alt="recent living">
-          </div>
-          <div class="interiorImg">
-            <div class="hoverWhite"></div>
-            <a href="#" class="viewBtn">view detail</a>
-            <img src="/space/img/L_03_01.jpg" alt="recent living">
-          </div>
+          <?php
+          }
+          ?>
         </div><!-- end of office -->
         <div class="interiorBox sto">
           <div class="interiorTxt">
@@ -122,21 +125,22 @@
             <p>새로움과 재미를 배치하다.</p>
             <a href="#" class="viewBtn">view more</a>
           </div>
+          <?php
+            $sql="select * from SPACE_STO order by SPACE_STO_num desc limit 3";
+
+            $result=mysqli_query($dbConn,$sql);
+            while($row=mysqli_fetch_array($result)){
+              $sto_num=$row['SPACE_STO_num'];
+              $sto_main=$row['SPACE_STO_img1'];
+          ?>
           <div class="interiorImg">
-            <a href="#" class="viewBtn">view detail</a>
+            <a href="/space/pages/store/sto_detail.php?num=<?=$sto_num?>" class="viewBtn">view detail</a>
             <div class="hoverWhite"></div>
-            <img src="/space/img/L_01_01.jpg" alt="recent living">
+            <img src="/space/data/store/<?=$sto_main?>" alt="recent store">
           </div>
-          <div class="interiorImg">
-            <div class="hoverWhite"></div>
-            <a href="#" class="viewBtn">view detail</a>
-            <img src="/space/img/L_02_01.jpg" alt="recent living">
-          </div>
-          <div class="interiorImg">
-            <div class="hoverWhite"></div>
-            <a href="#" class="viewBtn">view detail</a>
-            <img src="/space/img/L_03_01.jpg" alt="recent living">
-          </div>
+          <?php
+          }
+          ?>
         </div><!-- end of store -->
       </div>
     </section><!-- end of interior section -->

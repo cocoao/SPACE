@@ -11,11 +11,21 @@ $sto__detail_tit=$row_result['SPACE_STO_tit'];
 $sto__detail_type=$row_result['SPACE_STO_type'];
 $sto__detail_cli=$row_result['SPACE_STO_cli'];
 $sto__detail_term=$row_result['SPACE_STO_term'];
-$sto__detail_desc=$row_result['SPACE_STO_desc'];
+
+$sto__detail_desc=nl2br($row_result['SPACE_STO_desc']);
+$sto__detail_desc= addslashes($sto__detail_desc);
+
 $sto__detail_img1=$row_result['SPACE_STO_img1'];
 $sto__detail_img2=$row_result['SPACE_STO_img2'];
 $sto__detail_img3=$row_result['SPACE_STO_img3'];
 $sto__detail_img4=$row_result['SPACE_STO_img4'];
+
+// if($sto__detail_img4 == null){
+  
+//   echo "null";
+// } else {
+//   echo "not null";
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,36 +66,42 @@ $sto__detail_img4=$row_result['SPACE_STO_img4'];
         </div><!-- end of common title -->
         <div class="detailBox">
           <div class="leftBox clear">
-            <div class="imgNav">
-              <a href="#" class="active">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/store/<?=$sto__detail_img1?>" alt="store1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/store/<?=$sto__detail_img2?>" alt="store1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/store/<?=$sto__detail_img3?>" alt="store1">
-              </a>
-              <a href="#">
-                <span class="hoverWhite"></span>
-                <img src="/space/data/store/<?=$sto__detail_img4?>" alt="store1">
-              </a>
+            <div class="sideBox">
+              <div class="imgNav">
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/store/<?=$sto__detail_img1?>" alt="store1">
+                </a>
+                <a href="#">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/store/<?=$sto__detail_img2?>" alt="store2">
+                </a>
+                <a href="#" class="imgNull1">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/store/<?=$sto__detail_img3?>" alt="store3">
+                </a>
+                <a href="#" class="imgNull2">
+                  <span class="hoverWhite"></span>
+                  <img src="/space/data/store/<?=$sto__detail_img4?>" alt="store4">
+                </a>
+              </div>
+              <div class="btns">
+                <a href="/space/pages/admin/update_form.php?key=sto_update_form&num=<?=$sto__detail_num?>">수정</a>
+                <a href="/space/php_process/pages/sto_detail_delete.php?num=<?=$sto__detail_num?>">삭제</a>
+             </div>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">
                 <img src="/space/data/store/<?=$sto__detail_img1?>" alt="store1">
               </div>
               <div class="imgBox">
-                <img src="/space/data/store/<?=$sto__detail_img2?>" alt="store1">
+                <img src="/space/data/store/<?=$sto__detail_img2?>" alt="store2">
               </div>
               <div class="imgBox">
-                <img src="/space/data/store/<?=$sto__detail_img3?>" alt="store1">
+                <img src="/space/data/store/<?=$sto__detail_img3?>" alt="store3">
               </div>
               <div class="imgBox">
-                <img src="/space/data/store/<?=$sto__detail_img4?>" alt="store1">
+                <img src="/space/data/store/<?=$sto__detail_img4?>" alt="store4">
               </div>
             </div>
           </div><!-- end of left box -->

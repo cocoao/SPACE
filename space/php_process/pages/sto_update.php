@@ -1,12 +1,14 @@
+<meta charset='utf-8'>
 <?php
-  $off_title = nl2br($_REQUEST['title']);
-  $off_title = addslashes($off_title);
-  $off_type = $_REQUEST['type'];
-  $off_client = $_REQUEST['client'];
-  $off_term = $_REQUEST['term'];
-  $off_desc = $_REQUEST['desc'];
+  $sto_num=$_GET['num'];
+  $sto_title = nl2br($_REQUEST['title']);
+  $sto_title = addslashes($sto_title);
+  $sto_type = $_REQUEST['type'];
+  $sto_client = $_REQUEST['client'];
+  $sto_term = $_REQUEST['term'];
+  $sto_desc = $_REQUEST['desc'];
 
-  $img_upload_dir = $_SERVER['DOCUMENT_ROOT'].'/space/data/office/';
+  $img_upload_dir = $_SERVER['DOCUMENT_ROOT'].'/space/data/store/';
 
   $main_name = $_FILES['main']['name'];
   $main_tmp_name = $_FILES['main']['tmp_name'];
@@ -82,22 +84,14 @@
 
   include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
 
-  $sql = "INSERT INTO SPACE_OFF(SPACE_OFF_tit, SPACE_OFF_type, SPACE_OFF_cli, SPACE_OFF_term, SPACE_OFF_desc, SPACE_OFF_img1, SPACE_OFF_img2, SPACE_OFF_img3, SPACE_OFF_img4) VALUES ('$off_title', '$off_type', '$off_client', '$off_term','$off_desc','$main_name','$sub1_name','$sub2_name','$sub3_name')";
+  $sql = "UPDATE SPACE_STO SET SPACE_STO_tit='$sto_title', SPACE_STO_type='$sto_type', SPACE_STO_cli='$sto_client', SPACE_STO_term='$sto_term', SPACE_STO_desc='$sto_desc', SPACE_STO_img1='$main_name', SPACE_STO_img2='$sub1_name', SPACE_STO_img3='$sub2_name', SPACE_STO_img4='$sub3_name' WHERE SPACE_STO_num='$sto_num'";
 
   mysqli_query($dbConn,$sql);
 
-  // if($dbConn) {
-  //   echo "
-  //   <script>
-  //       alert('connected');
-  //   </script>
-  //   ";
-  // }
-
-  // echo $off_title, $off_type, $off_client, $off_term,$off_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
   echo "
   <script>
-      location.href='/space/pages/office/off.php';
+      alert('수정이 완료되었습니다.');
+      location.href='/space/pages/store/sto.php';
   </script>
   "
 ?>

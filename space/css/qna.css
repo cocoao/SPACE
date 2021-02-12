@@ -1,0 +1,27 @@
+.qnaBoxes .qnaTable{width: 80%; height: auto; padding-top: 40px; margin: auto;}
+.qnaBoxes .qnaTable li:nth-child(odd){background: #e8e8e8;}
+.qnaBoxes .qnaTable li.qnaTitle{width: 100%; height: auto; background: #644600;}
+.qnaBoxes .qnaTable li span{color: #fff; text-align: center; display: block; float: left; font-family: 'Noto Sans KR', sans-serif; font-weight: 300; padding: 10px 0;}
+
+.qnaBoxes .qnaTable li.qnaContents:last-child{border-bottom: 1px solid #644600;}
+
+.qnaBoxes .qnaTable li.qnaContents span,
+.qnaBoxes .qnaTable li.qnaContents span a{color: #333;}
+.qnaBoxes .qnaTable li.qnaContents span.qnaTit{text-align: left; padding-left: 20px;}
+.qnaBoxes .qnaTable li span.qnaNum{width: 10%;}
+.qnaBoxes .qnaTable li span.qnaTit{width: 50%;}
+.qnaBoxes .qnaTable li span.qnaId{width: 15%;}
+.qnaBoxes .qnaTable li span.qnaReg{width: 15%;}
+.qnaBoxes .qnaTable li span.qnaHit{width: 10%;}
+
+.bottomBox{width: 80%; height: auto; padding-top: 20px; margin: auto;;}
+.bottomBox .search{width: 50%; height: auto; float: left;}
+.bottomBox .search .searchSelect{width: 20%; border: 1px solid #644600; outline: 0;float: left; height: 30px; color: #644600; font-size: 14px;}
+.bottomBox .search .searchInput{width: 60%;border: 1px solid #644600;padding: 0 5px;float: left; height: 30px; margin-left: 5px;}
+.bottomBox .search .qnaSearchBtn{width: 10%; background: #644600; display: flex; justify-content: center; align-items: center;padding: 10px 0;float: left; height: 30px; outline: none; cursor: pointer;}
+.bottomBox .search .qnaSearchBtn i.fa{font-size: 18px; color: #fff;}
+
+.bottomBox .paging{width: 50%; display: flex; justify-content: flex-end;}
+.bottomBox .paging span{color: #644600; display: flex; float: left; width: 30px; height: 30px; border: 1px solid #644600; justify-content: center; align-items: center; margin-left: 5px; transition: all 0.4s;}
+.bottomBox .paging span:hover,
+.bottomBox .paging span.active{color: #fff; background: #644600; border-radius: 5px 0;}

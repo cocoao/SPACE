@@ -4,8 +4,7 @@
   $sto_type = $_REQUEST['type'];
   $sto_client = $_REQUEST['client'];
   $sto_term = $_REQUEST['term'];
-  $sto_desc = nl2br($_REQUEST['desc']);
-  $sto_desc = addslashes($sto_desc);
+  $sto_desc = $_REQUEST['desc'];
 
   $img_upload_dir = $_SERVER['DOCUMENT_ROOT'].'/space/data/store/';
 

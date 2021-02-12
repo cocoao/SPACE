@@ -12,7 +12,7 @@ body{font-size: 14px; font-family:'Open Sans', sans-serif;}
 ol,ul{list-style: none;}
 a{text-decoration: none; color: #111;}
 img{display: block;}
-button,input,textarea,section{outline: 0; font-family:'Open Sans', sans-serif; border-radius: 0; background: #fff;}
+button,input,textarea,section{outline: 0; font-family:'Open Sans', sans-serif; border-radius: 0; background: #fff; -webkit-appearance:none;}
 input::placeholder,textarea::placeholder{color: #644600;}
 input:focus,textarea:focus{background: #eee;}
 
@@ -66,9 +66,10 @@ header .mobileMenu i{font-size: 22px; color: #fff; display: none;}
 /* intro section style */
 .intro .introBox{width: 100%; height: auto; margin: auto; display: flex; justify-content: space-between;padding-top: 50px;}
 .intro .introBox .introCon{width: 32%; height: auto; overflow: hidden; position: relative; overflow: hidden;}
-.intro .introBox .introCon .introTxt{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; line-height: 1; z-index: 1;}
+.intro .introBox .introCon .introTxt{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; line-height: 1; z-index: 10;}
 .intro .introBox .introCon .introTxt em{font-family: 'Euphoria Script', cursive; font-size: 50px; font-style: normal;color: #fff;}
 .intro .introBox .introCon .introTxt h3{font-size: 22px; font-weight: 600;color: #fff;}
+.intro .introBox .introCon:hover{border-radius: 10px 0;}
 .intro .introBox .introCon:hover em,.intro .introBox .introCon:hover h3{color: #644600;}
 .intro .introBox .introCon:hover .hoverWhite{opacity: 1;}
 .intro .introBox .introCon img{width: 100%;}
@@ -86,6 +87,7 @@ header .mobileMenu i{font-size: 22px; color: #fff; display: none;}
 .interior .interiorTxt p{line-height: 2;}
 
 .interior .interiorImg{position: relative; width: 100%; border: 10px solid #e8e8e8; outline: 1px solid #644600;}
+.interior .interiorImg:hover{border-radius: 20px 0; box-shadow: 0 0 0 1px #644600; outline: none;}
 .interior .interiorImg:hover .viewBtn,.interior .interiorImg:hover .hoverWhite{opacity: 1;}
 .interior .interiorBox img{width: 100%;}
 
