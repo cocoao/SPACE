@@ -78,8 +78,8 @@ $liv__detail_img4=$row_result['SPACE_LIV_img4'];
                 </a>
               </div>
               <div class="btns">
-                <a href="/space/pages/admin/update_form.php?key=liv_update_form&num=<?=$liv__detail_num?>">수정</a>
-                <a href="/space/php_process/pages/liv_detail_delete.php?num=<?=$liv__detail_num?>">삭제</a>
+                <a href="/space/pages/admin/update_form.php?key=liv_update_form&num=<?=$liv__detail_num?>">UPDATE</a>
+                <a href="/space/php_process/pages/liv_detail_delete.php?num=<?=$liv__detail_num?>">DELETE</a>
              </div>
             </div>
             <div class="imgBoxes">

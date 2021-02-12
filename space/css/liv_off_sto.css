@@ -51,7 +51,7 @@
 
 .sideBox{position: relative;}
 .sideBox .btns{position: absolute; bottom: 0;  flex-wrap: wrap; justify-content: center;}
-.sideBox .btns a{width: 100%; padding: 5px 0; margin-top: 5px; text-align: center;}
+.sideBox .btns a{width: 100%; padding: 5px 0; margin-top: 5px; text-align: center; font-size: 12px;}
 
 /* right box */
 .rightBox{width: 35%; height: auto; float: right;}

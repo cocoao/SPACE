@@ -79,8 +79,8 @@ $off__detail_img4=$row_result['SPACE_OFF_img4'];
                 </a>
               </div>
               <div class="btns">
-                <a href="/space/pages/admin/update_form.php?key=off_update_form&num=<?=$off__detail_num?>">수정</a>
-                <a href="/space/php_process/pages/off_detail_delete.php?num=<?=$off__detail_num?>">삭제</a>
+                <a href="/space/pages/admin/update_form.php?key=off_update_form&num=<?=$off__detail_num?>">UPDATE</a>
+                <a href="/space/php_process/pages/off_detail_delete.php?num=<?=$off__detail_num?>">DELETE</a>
              </div>
             </div>
             <div class="imgBoxes">

@@ -22,6 +22,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="/space/js/custom.js" defer></script>
+  <script src="/space/js/qna.js" defer></script>
 
 </head>
 <body>
@@ -37,27 +38,11 @@
         <div class="qnaBoxes">
           <div class="qnaTable">
             <ul class="qnaList">
-              <li class="qnaTitle clear">
-                <span class="qnaNum">번호</span>
-                <span class="qnaTit">제목</span>
-                <span class="qnaId">아이디</span>
-                <span class="qnaReg">등록일</span>
-                <span class="qnaHit">조회수</span>
-              </li>
-              <li class="qnaContents clear">
-                <span class="qnaNum">번호</span>
-                <span class="qnaTit">첫번째 게시글입니다</span>
-                <span class="qnaId">아이디</span>
-                <span class="qnaReg">등록일</span>
-                <span class="qnaHit">조회수</span>
-              </li>
-              <li class="qnaContents clear">
-                <span class="qnaNum">번호</span>
-                <span class="qnaTit">첫번째 게시글입니다</span>
-                <span class="qnaId">아이디</span>
-                <span class="qnaReg">등록일</span>
-                <span class="qnaHit">조회수</span>
-              </li>
+
+            <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/space/data/ajax/qna_ajax.php"
+            ?>
+
             </ul>
           </div><!-- end of qnaTable -->
           <div class="bottomBox">
@@ -72,14 +57,65 @@
               </form>
             </div><!-- end of search -->
             <div class="paging">
-              <span class="firstPg"><i class="fa fa-angle-double-left"></i></span>
-              <span class="prevPg"><i class="fa fa-angle-left"></i></span>
-              <span class="nowPg">1</span>
-              <span class="nextPg"><i class="fa fa-angle-right"></i></span>
-              <span class="lastPg"><i class="fa fa-angle-double-right"></i></span>
+              <span class="firstPg" onclick="goFirst()"><i class="fa fa-angle-double-left"></i></span>
+              <span class="prevPg" onclick="goPrev()"><i class="fa fa-angle-left"></i></span>
+              <?php
+              include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
+              $sql="select * from SPACE_QNA order by SPACE_QNA_num desc";
+              $paging_result=mysqli_query($dbConn,$sql);
+              $total_record=mysqli_num_rows($paging_result);
+              $scale=5;
+
+              if($total_record % $scale == 0){
+                $total_page = floor($total_record/$scale);
+              } else {
+                $total_page = floor($total_record/$scale) + 1;
+              }
+
+              for($i=1; $i<=$total_page; $i++){
+              ?>
+              <span class="pgNum" onclick="getPage(<?=$i?>)"><?=$i?></span>
+              <?php
+              }
+              ?>
+              <span class="nextPg" onclick="goNext()"><i class="fa fa-angle-right"></i></span>
+              <span class="lastPg" onclick="goLast()"><i class="fa fa-angle-double-right"></i></span>
+            </div><!-- end of paging -->
+          </div><!-- end of bottomBox -->
+        </div><!-- end of qnaBoxes -->
+        <div class="qnaWriteBox">
+
+        <?php
+        if($userid == ''){
+        ?>
+        <div class="qnaWrite">
+            <form action="/space/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="qnaWrForm" name="qnaWrForm">
+              <input type="text" name="qnaWrTit" id="qnaWrTit" placeholder="제목을 입력해주세요." onclick="plzLogin()">
+              <textarea name="qnaWrTxt" id="qnaWrTxt" placeholder="내용을 입력해주세요." onclick="plzLogin()"></textarea>
+            </form>
+            <div class="qnaWriteBtns">
+              <button class="reset" onclick="plzLogin()">RESET</button>
+              <button onclick="plzLogin()">SUBMIT</button>
             </div>
           </div>
         </div>
+        <?php
+        } else {
+        ?>
+        <div class="qnaWrite">
+            <form action="/space/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="qnaWrForm" name="qnaWrForm">
+              <input type="text" name="qnaWrTit" id="qnaWrTit" placeholder="제목을 입력해주세요.">
+              <textarea name="qnaWrTxt" id="qnaWrTxt" placeholder="내용을 입력해주세요."></textarea>
+            </form>
+            <div class="qnaWriteBtns">
+              <button class="reset">RESET</button>
+              <button type="submit" class="submit">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+        <?php
+        }
+        ?>
       </div>
     </section><!-- end of liv section -->
 

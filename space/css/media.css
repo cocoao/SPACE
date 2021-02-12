@@ -14,6 +14,9 @@
   .detailContents{width: 100%; margin: auto;}
   .imgNav a{width: 40px; height: 40px;}
   .offSub .offImgBox{height: 70px;}
+
+  /* qna style */
+  .qnaBoxes .qnaTable,.qnaWriteBox,.bottomBox{width: 90%;}
 }
 
 @media screen and (max-width:900px){
@@ -42,6 +45,16 @@
   
   /* login, join style */
   .joinBox{width: 90%;}
+
+  /* qna style */
+  .qnaBoxes .qnaTable li span.qnaNum{width: 10%;}
+  .qnaBoxes .qnaTable li span.qnaTit{width: 60%;}
+  .qnaBoxes .qnaTable li span.qnaId{width: 20%;}
+  .qnaBoxes .qnaTable li span.qnaReg{display: none;}
+  .qnaBoxes .qnaTable li span.qnaHit{width: 10%;}
+
+  .qnaWriteBox .qnaWrForm{width: 85%;}
+  .qnaWriteBox .qnaWriteBtns{width: 14%;}
 }
 
 @media screen and (max-width:750px){
@@ -113,6 +126,21 @@
   .leftBox{width: 100%;}
   .rightBox{width: calc(100% - 70px); margin: 30px 0 0 80px; padding-right: 13px;}
   .subMenu{width: 100%;}
+
+  /* qna style */
+  .qnaBoxes .qnaTable,.qnaWriteBox,.bottomBox{width: 95%;}
+  .bottomBox .search{width: 100%;}
+  .bottomBox .search .searchInput{width: 69%;}
+  .bottomBox .search .qnaSearchBtn{width: calc(11% - 5px);}
+  .bottomBox .paging{width: 100%; padding-top: 20px; justify-content: center;}
+  .qnaBoxes .qnaTable li span{padding: 7px 0; font-size: 12px;}
+  
+  
+  .qnaWriteBox .qnaWrite{flex-direction: column;}
+  .qnaWriteBox .qnaWrForm{width: 100%;}
+  .qnaWriteBox .qnaWriteBtns{width: 100%; flex-direction: row; justify-content: space-between; margin-top: 10px; border-top: 1px dotted #644600; padding-top: 10px;}
+  .qnaWriteBox .qnaWriteBtns button{width: 49.5%; padding: 7px 0;}
+  .qnaWriteBox .qnaWriteBtns button:last-child{margin-top: 0;}
 }
 
 @media screen and (max-width:480px){
@@ -148,4 +176,12 @@
   .detailContents{width: 100%;}
 
   .imgNav a{width: 30px; height: 30px; margin-left: 10px;}
+
+  /* qna style */
+  .qnaBoxes .qnaTable li span.qnaNum{width: 15%;}
+  .qnaBoxes .qnaTable li span.qnaTit{width: 60%;}
+  .qnaBoxes .qnaTable li span.qnaId{width: 25%;}
+  .qnaBoxes .qnaTable li span.qnaHit{display: none;}
+
+  .qnaWriteBox{padding-top: 60px;}
 }
