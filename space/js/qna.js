@@ -80,3 +80,37 @@ function goFirst(){
 function goLast(){
   getPage(pageLength);
 }
+
+function search_check(){
+  if(!document.qnaSearch.searchInput.value){
+    alert('검색어를 입력해주세요.');
+    document.qnaSearch.searchInput.focus();
+    return;
+  }
+  document.qnaSearch.submit();
+}
+
+function returnPage(){
+  location.href='/space/pages/qna/qna.php';
+}
+
+
+// let txt_index = $(".qnaContents").index();
+
+function textOpen(){
+  let txt_index = $(this).index();
+
+  $(".qnaContents").find(".qnaTit").css({"display":"none"});
+  $(this).css({"display":"block"});
+}
+
+$(document).on('click','.qnaContents',function(){
+  // let qnaIndex = $(this).index();
+  // console.log(qnaIndex);
+    if($(".qnaCon").hasClass("active")){
+      $(".qnaCon").removeClass("active");
+  } else {
+    $(".qnaCon").removeClass("active");
+    $(this).find(".qnaCon").addClass("active");
+  }
+})

@@ -47,13 +47,13 @@
           </div><!-- end of qnaTable -->
           <div class="bottomBox">
             <div class="search">
-              <form action="#">
+              <form action="/space/pages/qna/qna_search_result.php" method="post" name="qnaSearch">
                 <select name="searchSelect" id="" class="searchSelect">
                   <option value="qnaSearchID">아이디</option>
                   <option value="qnaSearchTitle">제목</option>
                 </select>
                 <input type="text" name="searchInput" placeholder="검색어를 입력해주세요." class="searchInput">
-                <a type="button" class="qnaSearchBtn"><i class="fa fa-search"></i></a>
+                <a type="button" class="qnaSearchBtn" onclick="search_check()"><i class="fa fa-search"></i></a>
               </form>
             </div><!-- end of search -->
             <div class="paging">

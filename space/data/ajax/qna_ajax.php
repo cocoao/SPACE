@@ -24,6 +24,7 @@
     $qna_tit=$qna_row['SPACE_QNA_tit'];
     $qna_reg=$qna_row['SPACE_QNA_reg'];
     $qna_hit=$qna_row['SPACE_QNA_hit'];
+    $qna_con=$qna_row['SPACE_QNA_con'];
 ?>
 <li class="qnaContents clear">
   <span class="qnaNum"><?=$qna_num?></span>
@@ -31,7 +32,9 @@
   <span class="qnaId"><?=$qna_id?></span>
   <span class="qnaReg"><?=$qna_reg?></span>
   <span class="qnaHit"><?=$qna_hit?></span>
+  <span class="qnaCon"><?=$qna_con?></span>
 </li>
+
 <?php
 }
 ?>

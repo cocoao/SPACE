@@ -1,19 +1,21 @@
 /* qna list style */
 .qnaBoxes .qnaTable{width: 80%; height: auto; padding-top: 40px; margin: auto;}
-.qnaBoxes .qnaTable li:nth-child(odd){background: #e8e8e8;}
+/* .qnaBoxes .qnaTable li:nth-child(odd){background: #e8e8e8;} */
 .qnaBoxes .qnaTable li.qnaTitle{width: 100%; height: auto; background: #644600;}
-.qnaBoxes .qnaTable li span{color: #fff; text-align: center; display: block; float: left; font-family: 'Noto Sans KR', sans-serif; font-weight: 300; padding: 10px 0;}
-
+.qnaBoxes .qnaTable li span{color: #fff; text-align: center; _display: block; float: left; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; padding: 10px 0; }
+.qnaBoxes .qnaTable li{border-bottom: 1px dotted #644600;}
 .qnaBoxes .qnaTable li.qnaContents:last-child{border-bottom: 1px solid #644600;}
 
 .qnaBoxes .qnaTable li.qnaContents span,
 .qnaBoxes .qnaTable li.qnaContents span a{color: #333;}
-.qnaBoxes .qnaTable li.qnaContents span.qnaTit{text-align: left; padding-left: 20px;}
+.qnaBoxes .qnaTable li.qnaContents span.qnaTit{text-align: left;}
 .qnaBoxes .qnaTable li span.qnaNum{width: 10%;}
-.qnaBoxes .qnaTable li span.qnaTit{width: 50%;}
+.qnaBoxes .qnaTable li span.qnaTit{width: 50%; cursor: pointer;}
 .qnaBoxes .qnaTable li span.qnaId{width: 15%;}
 .qnaBoxes .qnaTable li span.qnaReg{width: 15%;}
 .qnaBoxes .qnaTable li span.qnaHit{width: 10%;}
+.qnaBoxes .qnaCon{display: none;}
+.qnaBoxes .qnaCon.active{width: 100%; padding: 20px 10%; _border-bottom: 1px solid #644600; display: block; _border-top: 1px dotted #644600; _margin-bottom: 5px; text-align: left; font-size: 12px;color: #333; font-weight: 300; background: #eee;}
 
 .bottomBox{width: 80%; height: auto; padding-top: 20px; margin: auto;;}
 .bottomBox .search{width: 50%; height: auto; float: left;}
@@ -23,7 +25,7 @@
 .bottomBox .search .qnaSearchBtn i.fa{font-size: 18px; color: #fff;}
 
 .bottomBox .paging{width: 50%; display: flex; justify-content: flex-end;}
-.bottomBox .paging span{color: #644600; display: flex; float: left; width: 30px; height: 30px; border: 1px solid #644600; justify-content: center; align-items: center; margin-left: 5px; transition: all 0.4s;}
+.bottomBox .paging span{color: #644600; display: flex; float: left; width: 30px; height: 30px; border: 1px solid #644600; justify-content: center; align-items: center; margin-left: 5px; transition: all 0.4s; cursor: pointer;}
 .bottomBox .paging span:hover,
 .bottomBox .paging span.active{color: #fff; background: #644600;}
 
@@ -38,3 +40,9 @@
 .qnaWriteBox .qnaWriteBtns button{width: 100%; height: 50%; border: 1px solid #644600; _background: #b2a89e; color: #644600; font-weight: 700; font-size: 12px; cursor: pointer;}
 .qnaWriteBox .qnaWriteBtns button:hover{background: #644600; color: #fff;}
 .qnaWriteBox .qnaWriteBtns button:last-child{margin-top: 10px;}
+
+
+/* .qnaResult .bottomBox .paging{width: 100%; display: flex; justify-content: center;} */
+.qnaResult .bottomBox{width: 100%; display: flex; justify-content: space-between;}
+.qnaResult .bottomBox .btns{width: 50%; height: auto; display: flex; padding-top: 0; margin-top: 0;}
+.qnaResult .bottomBox .btns button{width: 20%; height: 30px; padding: 0}
