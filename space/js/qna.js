@@ -95,22 +95,85 @@ function returnPage(){
 }
 
 
-// let txt_index = $(".qnaContents").index();
-
-function textOpen(){
-  let txt_index = $(this).index();
-
-  $(".qnaContents").find(".qnaTit").css({"display":"none"});
-  $(this).css({"display":"block"});
-}
-
 $(document).on('click','.qnaContents',function(){
   // let qnaIndex = $(this).index();
   // console.log(qnaIndex);
-    if($(".qnaCon").hasClass("active")){
-      $(".qnaCon").removeClass("active");
+    if($(this).next().hasClass("active")){
+      $(this).next().removeClass("active");
   } else {
-    $(".qnaCon").removeClass("active");
-    $(this).find(".qnaCon").addClass("active");
+    $(this).next().removeClass("active");
+    $(this).next().addClass("active");
   }
-})
+});
+
+
+
+
+
+// $(document).reply(function(){
+//   if(!document.ansWrForm.ansWrTxt.value){
+//     alert("내용을 입력해주세요.");
+//     document.ansWrForm.ansWrTxt.focus();
+//     return;
+//   }
+//   document.ansWrForm.submit();
+// });
+
+// $(function () {
+//   $('.ansSubmit').on('click', function () {
+//       var Status = $(this).val();
+//       $.ajax({
+//           url: '/space/data/ajax/qna_ajax.php',
+//           data: {
+//               text: $("textarea[name=ansWrTxt]").val(),
+//               Status: Status
+//           },
+//           dataType : 'json'
+//       });
+//   });
+// });
+
+// $(document).on("click",".ansSubmit",function(){
+//     if(!document.ansWrForm.ansWrTxt.value){
+//     alert("내용을 입력해주세요.");
+//     document.ansWrForm.ansWrTxt.focus();
+//     return;
+//   }
+//   document.ansWrForm.submit();
+// });
+
+// $(".ansSubmit").click(function (event) {
+
+
+//   event.preventDefault();
+
+//   // Get form
+//   var form = $('.ansWrForm')[0];
+
+// // Create an FormData object 
+//   var data = new FormData(form);
+
+// // disabled the submit button
+//   $(".ansSubmit").prop("disabled", true);
+
+//   $.ajax({
+//       type: "POST",
+//       enctype: 'multipart/form-data',
+//       url: "/space/data/ajax/qna_ajax.php",
+//       data: data,
+//       processData: false,
+//       contentType: false,
+//       cache: false,
+//       timeout: 600000,
+//       success: function (data) {
+//         alert("complete");
+//           $(".ansSubmit").prop("disabled", false);
+//       },
+//       error: function (e) {
+//           console.log("ERROR : ", e);
+//           $(".ansSubmit").prop("disabled", false);
+//           alert("fail");
+//       }
+//   });
+
+// });

@@ -69,14 +69,28 @@
                   $qna_result_tit=$search_result_row['SPACE_QNA_tit'];
                   $qna_result_reg=$search_result_row['SPACE_QNA_reg'];
                   $qna_result_hit=$search_result_row['SPACE_QNA_hit'];
+                  $qna_result_con=$search_result_row['SPACE_QNA_con'];
             ?>
             <li class="qnaContents clear">
               <span class="qnaNum"><?=$qna_result_num?></span>
-              <span class="qnaTit"><a href="/space/pages/qna/qna_view.php?num<?=$qna_result_num?>"><?=$qna_result_tit?></a></span>
+              <span class="qnaTit"><?=$qna_result_tit?></span>
               <span class="qnaId"><?=$qna_result_id?></span>
               <span class="qnaReg"><?=$qna_result_reg?></span>
               <span class="qnaHit"><?=$qna_result_hit?></span>
             </li>
+            <div class="txtBox clear">
+              <span class="qnaCon"><?=$qna_result_con?></span>    
+              <span class="qnaAns">답글답글</span>
+              <div class="ansWrite">
+                <form action="/space/php_process/pages/ans_insert.php?num=<?=$qna_result_num?>" method="post" class="ansWrForm" name="ansWrForm" enctype="multipart/form-data">
+                  <textarea name="ansWrTxt" id="ansWrTxt" placeholder="내용을 입력해주세요."></textarea>
+                </form>
+                <div class="ansWriteBtns">
+                  <button class="reset">RESET</button>
+                  <button type="submit" class="ansSubmit">SUBMIT</button>
+                </div>
+              </div>  
+            </div>
             <?php
                 }
               }
@@ -122,5 +136,16 @@
     ?>
 
   </div><!-- end of wrap -->
+
+  <script>
+    $('.qnaContents').click(function(){
+     if($(this).next().hasClass("active")){
+      $(this).next().removeClass("active");
+     } else {
+    $(this).next().removeClass("active");
+      $(this).next().addClass("active");
+     }
+    });
+  </script>
 </body>
 </html>

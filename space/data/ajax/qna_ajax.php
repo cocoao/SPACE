@@ -32,9 +32,32 @@
   <span class="qnaId"><?=$qna_id?></span>
   <span class="qnaReg"><?=$qna_reg?></span>
   <span class="qnaHit"><?=$qna_hit?></span>
-  <span class="qnaCon"><?=$qna_con?></span>
 </li>
 
 <?php
+if($userlevel != 1){
+?> 
+<div class="txtBox clear">
+  <span class="qnaCon"><?=$qna_con?></span>    
+  <span class="qnaAns">답글답글</span>
+</div>
+<?php
+} else {
+?>
+<div class="txtBox clear">
+  <span class="qnaCon"><?=$qna_con?></span>    
+  <span class="qnaAns">답글답글</span>
+  <div class="ansWrite">
+    <form action="/space/php_process/pages/ans_insert.php?num=<?=$qna_num?>" method="post" class="ansWrForm" name="ansWrForm" enctype="multipart/form-data">
+      <textarea name="ansWrTxt" id="ansWrTxt" placeholder="내용을 입력해주세요."></textarea>
+    </form>
+    <div class="ansWriteBtns">
+      <button class="reset">RESET</button>
+      <button type="submit" class="ansSubmit">SUBMIT</button>
+    </div>
+  </div>  
+</div>
+<?php
+  }
 }
 ?>

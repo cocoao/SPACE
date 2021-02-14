@@ -15,6 +15,7 @@ img{display: block;}
 button,input,textarea,section{outline: 0; font-family:'Open Sans', sans-serif; border-radius: 0; background: #fff; -webkit-appearance:none;}
 input::placeholder,textarea::placeholder{color: #644600;}
 input:focus,textarea:focus{background: #eee;}
+input[type="checkbox"]{-webkit-appearance:auto; border:1px solid #644600; border-radius: 0;}
 
 /* general common section style */
 .contents{padding: 50px 0;}
