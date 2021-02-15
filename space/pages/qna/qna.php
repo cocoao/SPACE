@@ -109,7 +109,7 @@
             </form>
             <div class="qnaWriteBtns">
               <button class="reset">RESET</button>
-              <button type="submit" class="submit">SUBMIT</button>
+              <button type="submit" class="submit" onclick="qnaWrSubmit()">SUBMIT</button>
             </div>
           </div>
         </div>

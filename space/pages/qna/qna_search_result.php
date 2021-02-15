@@ -73,14 +73,57 @@
             ?>
             <li class="qnaContents clear">
               <span class="qnaNum"><?=$qna_result_num?></span>
+              <?php
+                $ans_sql="select * from SPACE_ANS where SPACE_ANS_QNA_num=$qna_result_num order by SPACE_ANS_num desc";
+                $ans_result = mysqli_query($dbConn, $ans_sql);
+                $ans_num_row=mysqli_num_rows($ans_result);
+                $ans_row=mysqli_fetch_array($ans_result);
+                $ans_num=$ans_row['SPACE_ANS_num'];
+                $ans_con=$ans_row['SPACE_ANS_con'];
+                $ans_reg=$ans_row['SPACE_ANS_reg'];
+
+              if(!$ans_num_row){
+              ?>
               <span class="qnaTit"><?=$qna_result_tit?></span>
+              <?php
+              } else {
+              ?>
+              <span class="qnaTit"><?=$qna_result_tit?> [답변완료]</span>
+              <?php
+              }
+              ?>
               <span class="qnaId"><?=$qna_result_id?></span>
               <span class="qnaReg"><?=$qna_result_reg?></span>
               <span class="qnaHit"><?=$qna_result_hit?></span>
             </li>
+            
+            <?php
+            if($userlevel != 1){
+            ?> 
             <div class="txtBox clear">
-              <span class="qnaCon"><?=$qna_result_con?></span>    
-              <span class="qnaAns">답글답글</span>
+              <span class="qnaCon"><?=$qna_con?></span>    
+              <span class="qnaAns">
+                <em><?=$ans_con?></em>
+                <span>
+                  <p><?=$ans_reg?></p>
+                </span>
+              </span>
+            </div>
+            <?php
+            } else {
+            ?>
+            <div class="txtBox clear">
+              <span class="qnaCon"><?=$qna_con?></span>
+              <span class="qnaAns">
+                <em><?=$ans_con?></em>
+                <span>
+                  <a href="/space/php_process/admin/ans_delete.php?num=<?=$ans_num?>" class="ansDelete">DELETE</a>
+                  <p><?=$ans_reg?></p>
+                </span>
+              </span>
+              <?php
+              }
+              ?>
               <div class="ansWrite">
                 <form action="/space/php_process/pages/ans_insert.php?num=<?=$qna_result_num?>" method="post" class="ansWrForm" name="ansWrForm" enctype="multipart/form-data">
                   <textarea name="ansWrTxt" id="ansWrTxt" placeholder="내용을 입력해주세요."></textarea>

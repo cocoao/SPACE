@@ -105,8 +105,7 @@
                 <span class="firstPg" onclick="goFirst()"><i class="fa fa-angle-double-left"></i></span>
                 <span class="prevPg" onclick="goPrev()"><i class="fa fa-angle-left"></i></span>
                 <?php
-                include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
-                $sql="select * from SPACE_ANS order by SPACE_ANS_num desc";
+                $sql="select * from SPACE_MSG order by SPACE_MSG_num desc";
                 $paging_result=mysqli_query($dbConn,$sql);
                 $total_record=mysqli_num_rows($paging_result);
                 $scale=5;

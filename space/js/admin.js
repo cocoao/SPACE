@@ -27,20 +27,12 @@ $(function(){
 let currentPage = 1;
 let pageLength = $(".pgNum").length;
 
-// function getPage(no){
-//   $(".pgNum").removeClass("active");
-//   $(".pgNum").eq(no-1).addClass("active");
+function getPage(no){
+  $(".pgNum").removeClass("active");
+  $(".pgNum").eq(no-1).addClass("active");
 
-//   $.get(
-//     url,
-//     {page:no},
-//     function(qna_data){
-//     $(".adminList").html(qna_data);
-//     currentPage = no;
-//     }
-//   );
-// }
-// $(".pgNum").eq(0).trigger('click');
+};
+$(".pgNum").eq(0).trigger('click');
 
 function goNext(){
   if(currentPage == pageLength){

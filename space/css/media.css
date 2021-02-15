@@ -17,8 +17,20 @@
 
   /* qna style */
   .qnaBoxes .qnaTable,.qnaWriteBox,.bottomBox{width: 90%;}
+  .ansWrite .ansWriteBtns{width:15%;}
+  .ansWrite .ansWriteBtns button{font-size: 12px;}
+  
+  /* admin style */
+  .adminPanel{width: 90%;}
+  .adminPanel .bottomBox{width: 100%;}
+  .adminPanel .adminTable li span.msgCheck{width: 10%;}
+  .adminPanel .adminTable li span.msgNum{width: 10%;}
+  .adminPanel .adminTable li span.msgTit{width: 45%; cursor: pointer;}
+  .adminPanel .adminTable li span.msgName{width: 10%;}
+  .adminPanel .adminTable li span.msgEmail{display: none;}
+  .adminPanel .adminTable li span.msgReg{width: 25%;}
 }
-
+ 
 @media screen and (max-width:900px){
   header .topMainLeft .logo h1{font-size: 45px;}
   header .topMainLeft .logo p{font-size: 12px;}
@@ -55,6 +67,9 @@
 
   .qnaWriteBox .qnaWrForm{width: 85%;}
   .qnaWriteBox .qnaWriteBtns{width: 14%;}
+
+  /* admin style */
+  .adminPanel .bottomBox button{font-size: 12px;}
 }
 
 @media screen and (max-width:750px){
@@ -141,6 +156,21 @@
   .qnaWriteBox .qnaWriteBtns{width: 100%; flex-direction: row; justify-content: space-between; margin-top: 10px; border-top: 1px dotted #644600; padding-top: 10px;}
   .qnaWriteBox .qnaWriteBtns button{width: 49.5%; padding: 7px 0;}
   .qnaWriteBox .qnaWriteBtns button:last-child{margin-top: 0;}
+
+  .ansWrite .ansWrForm{flex-direction: column;}
+  .ansWrite .ansWrForm textarea{width: 100%; margin-bottom: 5px;}
+  .ansWrite .ansWriteBtns{width:100%;}
+  .ansWrite .ansWriteBtns button{font-size: 12px;}
+
+  /* admin style */
+  .adminTab button{width: 20%;}
+  .adminPanel .bottomBox button{width: 15%; height: 30px;}
+  .adminPanel .bottomBox .paging{justify-content:flex-end; padding-top: 0;}
+  .adminPanel .adminTable li span.msgCheck{width: 15%;}
+  .adminPanel .adminTable li span.msgNum{display: none;}
+  .adminPanel .adminTable li span.msgTit{width: 65%; cursor: pointer;}
+  .adminPanel .adminTable li span.msgName{width: 20%;}
+  .adminPanel .adminTable li span.msgReg{display: none;}
 }
 
 @media screen and (max-width:480px){
@@ -184,4 +214,14 @@
   .qnaBoxes .qnaTable li span.qnaHit{display: none;}
 
   .qnaWriteBox{padding-top: 60px;}
+
+  .ansWrite,.qnaBoxes .qnaAns,.ansWrite{margin: 20px 20px 0;}
+  .qnaBoxes .qnaCon{padding: 20px;}
+
+  /* admin style */
+  .adminTab{margin: 20px 0 30px;}
+  .adminTab button{width: 25%; padding: 7px 0;}
+  .adminPanel .bottomBox{padding-top: 10px;}
+  .adminPanel .bottomBox button{height: 20px; width: 20%;}
+  .adminPanel .bottomBox .paging span{width: 20px; height: 20px; font-size: 12px; margin-left:3px}
 }
