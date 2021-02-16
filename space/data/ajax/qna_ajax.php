@@ -28,13 +28,20 @@ if(isset($_SESSION["userlevel"])){
   $sql = "select * from SPACE_QNA order by SPACE_QNA_num desc limit $from,5";
 
   $qna_result = mysqli_query($dbConn, $sql);
+
+  // $new_hit = $qna_hit + 1;
+  // $hit_sql = "update SPACE_QNA set GOLD_QNA_hit='$new_hit' where GOLD_QNA_num=$qna_num";
+  // mysqli_query($dbConn,$hit_sql); 
+
   while($qna_row=mysqli_fetch_array($qna_result)){
     $qna_num=$qna_row['SPACE_QNA_num'];
     $qna_id=$qna_row['SPACE_QNA_id'];
-    $qna_tit=$qna_row['SPACE_QNA_tit'];
+    $qna_tit=nl2br($qna_row['SPACE_QNA_tit']);
+    $qna_tit=addslashes($qna_tit);
     $qna_reg=$qna_row['SPACE_QNA_reg'];
     $qna_hit=$qna_row['SPACE_QNA_hit'];
-    $qna_con=$qna_row['SPACE_QNA_con'];
+    $qna_con=nl2br($qna_row['SPACE_QNA_con']);
+    $qna_con=addslashes($qna_con);
 ?>
 <li class="qnaContents clear">
   <span class="qnaNum"><?=$qna_num?></span>
@@ -44,9 +51,10 @@ if(isset($_SESSION["userlevel"])){
     $ans_result = mysqli_query($dbConn, $ans_sql);
     $ans_num_row=mysqli_num_rows($ans_result);
     $ans_row=mysqli_fetch_array($ans_result);
-      $ans_num=$ans_row['SPACE_ANS_num'];
-      $ans_con=$ans_row['SPACE_ANS_con'];
-      $ans_reg=$ans_row['SPACE_ANS_reg'];
+    $ans_num=$ans_row['SPACE_ANS_num'];
+    $ans_con=nl2br($ans_row['SPACE_ANS_con']);
+    $ans_con=addslashes($ans_con);
+    $ans_reg=$ans_row['SPACE_ANS_reg'];
     if(!$ans_num_row){
   ?>
   <span class="qnaTit"><?=$qna_tit?></span>

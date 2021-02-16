@@ -7,7 +7,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 body{font-size: 14px; font-family:'Open Sans', sans-serif;}
 .clear::after{clear: both; content: ''; display: block;}
-.wrap{width: 100%; height: 100%; overflow: hidden;}
+.wrap{width: 100%; _height: 100%; overflow: hidden;}
 .center{width: 80%; height: auto; max-width: 1200px; margin: auto;}
 ol,ul{list-style: none;}
 a{text-decoration: none; color: #111;}

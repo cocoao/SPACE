@@ -44,7 +44,7 @@
 .imgNav .hoverWhite{width: 100%; height: 100%; z-index: 1; background: rgba(100,70,0,0.5);}
 .imgNav a:hover .hoverWhite,.imgNav a.active .hoverWhite{opacity: 1;}
 .imgNav a img{width: 100%; object-fit: cover;}
-.imgNull.hidden{display: none;}
+.imgNav a.hidden{display: none;}
 .imgBoxes{width: calc(100% - 80px); height: auto ;border: 1px solid #644600; padding: 5px;}
 .imgBox{width: 100%;}
 .imgBox img{width: 100%;}

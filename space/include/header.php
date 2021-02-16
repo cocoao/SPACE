@@ -42,7 +42,7 @@
       ?>
       <a href="/space/pages/login/login_form.php"><?=$userid?>[<?=$userpoint?>]</a>
       <a href="/space/php_process/login/logout.php">LOGOUT</a>
-      <a href="/space/pages/admin/admin.php">ADMIN</a>
+      <a href="/space/pages/admin/admin.php?key=admin_msg">ADMIN</a>
     <?php
       } else {
     ?>

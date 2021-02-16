@@ -4,7 +4,7 @@
 if(!isset($_POST['item'])){
   echo"
   <script>
-  alert('삭제할 게시글을 선택해 주세요');
+  alert('삭제할 회원을 선택해 주세요');
   history.go(-1)
   </script>";
 } else {
@@ -13,13 +13,13 @@ if(!isset($_POST['item'])){
 
   for($i=0; $i<count($_POST['item']); $i++){
     $check_num=$_POST['item'][$i];
-    $sql="delete from SPACE_MSG where SPACE_MSG_num=$check_num";
+    $sql="delete from SPACE_MEM where SPACE_MEM_num=$check_num";
     mysqli_query($dbConn,$sql);
   }
   echo"
     <script>
     alert('삭제가 완료되었습니다');
-    location.href='/space/pages/admin/admin.php?key=admin_msg'
+    location.href='/space/pages/admin/admin.php?key=admin_mem'
     </script>";
 
 };

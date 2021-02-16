@@ -19,6 +19,21 @@ $off__detail_img1=$row_result['SPACE_OFF_img1'];
 $off__detail_img2=$row_result['SPACE_OFF_img2'];
 $off__detail_img3=$row_result['SPACE_OFF_img3'];
 $off__detail_img4=$row_result['SPACE_OFF_img4'];
+
+if(!$off__detail_img3){
+?>
+<style>
+  .imgNav a:nth-child(3){display:none;}
+</style>
+<?php  
+}
+if(!$off__detail_img4){
+?>
+<style>
+  .imgNav a:nth-child(4){display:none;}
+</style>
+<?php  
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
