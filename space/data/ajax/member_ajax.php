@@ -1,6 +1,6 @@
 
 <li class="adminTitle clear">
-  <span class="memCheck">선택</span>
+  <span class="memCheck">삭제</span>
   <span class="memId">아이디</span>
   <span class="memName">이름</span>
   <span class="memEmail">이메일</span>
@@ -8,6 +8,8 @@
   <span class="memLv">레벨</span>
   <span class="memReg">가입일</span>
 </li>
+
+<form action="/space/php_process/admin/mem_update.php?num=<?=$mem_num?>" method="post" name="confirmUpdate">
 <?php
 $page = $_REQUEST['page'];
 
@@ -30,9 +32,9 @@ while($mem_row=mysqli_fetch_array($mem_result)){
   $mem_level = $mem_row['SPACE_MEM_level'];
   $mem_reg = $mem_row['SPACE_MEM_reg'];
 ?>
-<form action="/space/php_process/admin/mem_check_delete.php" method="post" name="adminMemUpdate">
+
 <li class="adminContents clear memAdmin">
- <span class="memCheck"><input type="checkbox" name="item[]" value="<?=$mem_num?>"></span>
+  <span class="memCheck"><button type="button" class="qnaDelBtn" onclick="javascript:location.href='/space/php_process/admin/mem_check_delete.php?num=<?=$mem_num?>'">DELETE</button></span>
   <span class="memId"><?=$mem_id?></span>
   <span class="memName"><?=$mem_name?></span>
   <span class="memEmail"><?=$mem_email?></span>
@@ -40,6 +42,11 @@ while($mem_row=mysqli_fetch_array($mem_result)){
   <span class="memLv"><input type="text" value="<?=$mem_level?>" name="level"></span>
   <span class="memReg"><?=$mem_reg?></span>
 </li>
+<script defer>
+  function confirmUpdate(){
+  document.adminMemUpdate.submit();
+}
+</script>
 <?php
 }
 ?>

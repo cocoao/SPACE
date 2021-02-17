@@ -14,11 +14,8 @@
       ?>
         </ul>
         <div class="bottomBox">
-          <div class="memBtns">
-          <button type="button" class="checkDelBtn" onclick="confirmDel()">DELETE</button>
-          <button type="button" class="checkUpBtn" onclick="location.href='/space/php_process/admin/mem_update.php?num=<?=$mem_num?>'">UPDATE</button>
-          </div>
-          <div class="paging">
+            <button type="submit" class="checkDelBtn" onclick="confirmUpdate()">UPDATE</button>
+            <div class="paging">
               <span class="firstPg" onclick="goFirst()"><i class="fa fa-angle-double-left"></i></span>
               <span class="prevPg" onclick="goPrev()"><i class="fa fa-angle-left"></i></span>
               <?php
@@ -48,6 +45,17 @@
     </div><!-- end of member admin panel -->
 
     <script>
+
+
+function confirmUpdate(){
+    let upConfirmCheck = confirm('수정하시겠습니까?');
+    if(upConfirmCheck == false){
+      return false;
+    } else {
+      document.confirmUpdate.submit();
+    }
+  }
+
       $(function(){
   let url = "/space/data/ajax/member_ajax.php";
 
@@ -81,4 +89,17 @@ $(".pgNum").eq(0).trigger('click');
 // function confirmUpdate(){
 //   document.adminMemUpdate.submit();
 // }
-//     </script>
+
+//
+
+
+  // function memConfirmDel(){
+  //   let confirmCheck = confirm('정말 삭제하시겠습니까?');
+  //   if(confirmCheck == false){
+  //     return false;
+  //   } else {
+  //     location.href="/space/php_process/admin/mem_check_delete.php?num=<?=$mem_num?>"
+  //   }
+  // }
+  
+</script>

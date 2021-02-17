@@ -1,6 +1,6 @@
 
 <li class="adminTitle clear">
-  <span class="qnaCheck">선택</span>
+  <span class="qnaCheck">삭제</span>
   <span class="qnaNum">번호</span>
   <span class="qnaTit">제목</span>
   <span class="qnaId">아이디</span>
@@ -30,9 +30,10 @@ while($qna_row=mysqli_fetch_array($qna_result)){
   $qna_con=nl2br($qna_row['SPACE_QNA_con']);
   $qna_con=addslashes($qna_con);
 ?>
-<form action="/space/php_process/admin/qna_check_delete.php" method="post" name="adminDelete" class="adminDelete">
+<form action="/space/php_process/admin/qna_check_delete.php?num=<?=$qna_num?>" method="post" name="adminDelete" class="adminDelete">
 <li class="adminContents clear qnaContents">
-<span class="qnaCheck"><input type="checkbox" name="item[]" value="<?=$qna_num?>"></span>
+<span class="qnaCheck"><button type="submit" class="qnaDelBtn" onclick="confirmDel()">DELETE</button></span>
+<!-- <span class="qnaCheck"><input type="checkbox" name="item[]" value="<?=$qna_num?>"></span> -->
 <span class="qnaNum"><?=$qna_num?></span>
 
 <?php

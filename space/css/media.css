@@ -70,6 +70,13 @@
 
   /* admin style */
   .adminPanel .bottomBox button{font-size: 12px;}
+  .adminPanel .adminTable li span.memCheck{width: 10%;}
+  .adminPanel .adminTable li span.memId{width: 15%;}
+  .adminPanel .adminTable li span.memName{width: 15%;}
+  .adminPanel .adminTable li span.memEmail{width: 30%;}
+  .adminPanel .adminTable li span.memPo{width:15%;}
+  .adminPanel .adminTable li span.memLv{width: 15%;}
+  .adminPanel .adminTable li span.memReg{display: none;}
 }
 
 @media screen and (max-width:750px){
@@ -171,6 +178,28 @@
   .adminPanel .adminTable li span.msgTit{width: 65%; cursor: pointer;}
   .adminPanel .adminTable li span.msgName{width: 20%;}
   .adminPanel .adminTable li span.msgReg{display: none;}
+
+  .adminPanel .bottomBox .memBtns button{width: 40%;}
+  .adminPanel .adminTable li span.memCheck{width: 15%;}
+  .adminPanel .adminTable li span.memId{width: 25%;}
+  .adminPanel .adminTable li span.memName{width: 20%;}
+  .adminPanel .adminTable li span.memEmail{display: none;}
+  .adminPanel .adminTable li span.memPo{width:20%;}
+  .adminPanel .adminTable li span.memLv{width: 20%;}
+
+  .adminPanel .adminTable li span.qnaCheck{width: 20%;}
+  .adminPanel .adminTable li span.qnaNum{display: none;}
+  .adminPanel .adminTable li span.qnaTit{width: 60%;}
+  .adminPanel .adminTable li span.qnaId{width: 20%;}
+  .adminPanel .adminTable li span.qnaReg{display: none;}
+  .adminPanel .adminTable li span.qnaHit{display: none;}
+
+  .adminPanel .bottomBox{padding-top: 10px;}
+  .adminPanel .bottomBox button{height: 20px; width: 20%;}
+  .adminPanel .bottomBox .paging span{width: 20px; height: 20px; font-size: 12px; margin-left:3px}
+  .adminPanel .bottomBox button,.memAdmin input,.qnaDelBtn{font-size: 12px;}
+  .memBtns{width: 60%;}
+  .adminPanel .bottomBox .memBtns button{font-size: 12px; width: 48%;}
 }
 
 @media screen and (max-width:480px){
@@ -221,7 +250,6 @@
   /* admin style */
   .adminTab{margin: 20px 0 30px;}
   .adminTab button{width: 25%; padding: 7px 0;}
-  .adminPanel .bottomBox{padding-top: 10px;}
-  .adminPanel .bottomBox button{height: 20px; width: 20%;}
-  .adminPanel .bottomBox .paging span{width: 20px; height: 20px; font-size: 12px; margin-left:3px}
+  .adminPanel .adminTable li{font-size: 12px;}
+
 }

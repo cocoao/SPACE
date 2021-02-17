@@ -14,7 +14,7 @@
       ?>
         </ul>
         <div class="bottomBox">
-          <button type="button" class="checkDelBtn" onclick="confirmDel()">DELETE</button>
+          <!-- <button type="button" class="checkDelBtn" onclick="confirmDel()">DELETE</button> -->
           <div class="paging">
               <span class="firstPg" onclick="goFirst()"><i class="fa fa-angle-double-left"></i></span>
               <span class="prevPg" onclick="goPrev()"><i class="fa fa-angle-left"></i></span>
@@ -44,17 +44,17 @@
       </div>
     </div><!-- end of qna admin panel -->
 
-    <script>
-      $(document).on('click','.adminDelete',function(){
-      // let qnaIndex = $(this).index();
-      // console.log(qnaIndex);
-        if($(this).next().hasClass("active")){
-          $(this).next().removeClass("active");
-      } else {
+  <script>
+    $(document).on('click','.adminDelete',function(){
+    // let qnaIndex = $(this).index();
+    // console.log(qnaIndex);
+      if($(this).next().hasClass("active")){
         $(this).next().removeClass("active");
-        $(this).next().addClass("active");
-      }
-    });
+    } else {
+      $(this).next().removeClass("active");
+      $(this).next().addClass("active");
+    }
+  });
 
     $(function(){
     let url = "/space/data/ajax/qna_admin_ajax.php";
