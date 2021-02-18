@@ -9,12 +9,14 @@
       </div><!-- end of common title -->
       <div class="adminTable">
         <ul class="adminList">
-      <?php
-      include $_SERVER["DOCUMENT_ROOT"]."/space/data/ajax/member_ajax.php"
-      ?>
+
+        <!-- mem admin ajax -->
+
         </ul>
         <div class="bottomBox">
             <button type="submit" class="checkDelBtn" onclick="confirmUpdate()">UPDATE</button>
+
+
             <div class="paging">
               <span class="firstPg" onclick="goFirst()"><i class="fa fa-angle-double-left"></i></span>
               <span class="prevPg" onclick="goPrev()"><i class="fa fa-angle-left"></i></span>
@@ -45,52 +47,48 @@
     </div><!-- end of member admin panel -->
 
     <script>
-
-
-function confirmUpdate(){
-    let upConfirmCheck = confirm('수정하시겠습니까?');
-    if(upConfirmCheck == false){
-      return false;
-    } else {
-      document.confirmUpdate.submit();
-    }
-  }
+    function confirmUpdate(){
+        let upConfirmCheck = confirm('수정하시겠습니까?');
+        if(upConfirmCheck == false){
+          return false;
+        } else {
+          document.upConfirmCheck.submit();
+        }
+      }
 
       $(function(){
-  let url = "/space/data/ajax/member_ajax.php";
+      let url = "/space/data/ajax/member_ajax.php";
 
-  $.get(
-    url,
-    {page:1},
-    function(msg_data){
-      $(".adminList").html(msg_data);
+      $.get(
+        url,
+        {page:1},
+        function(msg_data){
+          $(".adminList").html(msg_data);
+        }
+      );
+    });
+
+    let currentPage = 1;
+    let pageLength = $(".pgNum").length;
+    function getPage(no){
+      let url = "/space/data/ajax/member_ajax.php";
+      $(".pgNum").removeClass("active");
+      $(".pgNum").eq(no-1).addClass("active");
+
+      $.get(
+        url,
+        {page:no},
+        function(qna_data){
+        $(".adminList").html(qna_data);
+        currentPage = no;
+        }
+      );
     }
-  );
-});
+    $(".pgNum").eq(0).trigger('click');
 
-let currentPage = 1;
-let pageLength = $(".pgNum").length;
-function getPage(no){
-  let url = "/space/data/ajax/member_ajax.php";
-  $(".pgNum").removeClass("active");
-  $(".pgNum").eq(no-1).addClass("active");
-
-  $.get(
-    url,
-    {page:no},
-    function(qna_data){
-    $(".adminList").html(qna_data);
-    currentPage = no;
-    }
-  );
-}
-$(".pgNum").eq(0).trigger('click');
-
-// function confirmUpdate(){
-//   document.adminMemUpdate.submit();
-// }
-
-//
+    //   function confirmUpdate(){
+    //   document.adminMemUpdate.submit();
+    // }
 
 
   // function memConfirmDel(){

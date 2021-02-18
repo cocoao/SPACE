@@ -57,11 +57,18 @@ if(isset($_SESSION["userlevel"])){
     $ans_reg=$ans_row['SPACE_ANS_reg'];
     if(!$ans_num_row){
   ?>
-  <span class="qnaTit"><?=$qna_tit?></span>
+  <form action="#" method="post" name="qnaUpdate"></form>
+  <span class="qnaTit">
+    <p><?=$qna_tit?></p>
+    <input type="text" value="<?=$qna_tit?>" class="hiddenTit" name="updateTit">
+  </span>
   <?php
   } else {
   ?>
-  <span class="qnaTit"><?=$qna_tit?> [답변완료]</span>
+  <span class="qnaTit">
+    <p class="nowTit"><?=$qna_tit?> [답변완료]</p>
+    <input type="text" value="<?=$qna_tit?>" class="hiddenTit" name="updateTit">
+    </span>
   <?php
   }
   ?>
@@ -74,7 +81,20 @@ if(isset($_SESSION["userlevel"])){
 if($userlevel == 1){
 ?> 
 <div class="txtBox clear">
-  <span class="qnaCon"><?=$qna_con?></span>
+  <div class="txtBoxWrap">
+  <div class="qnaConBtnBox">
+    <span class="qnaCon">
+      <p class="nowCon"><?=$qna_con?></p>
+      <textarea class="hiddenCon" value="<?=$qna_con?>" name="updateCon"><?=$qna_con?></textarea>
+    </span>
+    <div class="qnaBtns">
+      <div class="qnaBtn">
+        <button type="button" class="qnaUpdateBtn">수정</button>
+        <button type="button" class="hiddenDelete">삭제</button>
+        <button type="button" onclick="qnaUpdate()" class="hiddenUpdate">등록</button>
+      </div>
+    </div>
+  </div>
   <span class="qnaAns">
     <em><?=$ans_con?></em>
     <span>
@@ -89,6 +109,7 @@ if($userlevel == 1){
         <button type="submit" class="ansSubmit">SUBMIT</button>
       </div>
     </form>
+  </div>
   </div>  
 </div>
 <?php

@@ -9,7 +9,6 @@
   <span class="memReg">가입일</span>
 </li>
 
-<form action="/space/php_process/admin/mem_update.php?num=<?=$mem_num?>" method="post" name="confirmUpdate">
 <?php
 $page = $_REQUEST['page'];
 
@@ -32,7 +31,7 @@ while($mem_row=mysqli_fetch_array($mem_result)){
   $mem_level = $mem_row['SPACE_MEM_level'];
   $mem_reg = $mem_row['SPACE_MEM_reg'];
 ?>
-
+<form action="/space/php_process/admin/mem_update.php?num=<?=$mem_num?>" method="post" name="upConfirmCheck">
 <li class="adminContents clear memAdmin">
   <span class="memCheck"><button type="button" class="qnaDelBtn" onclick="javascript:location.href='/space/php_process/admin/mem_check_delete.php?num=<?=$mem_num?>'">DELETE</button></span>
   <span class="memId"><?=$mem_id?></span>
@@ -42,12 +41,8 @@ while($mem_row=mysqli_fetch_array($mem_result)){
   <span class="memLv"><input type="text" value="<?=$mem_level?>" name="level"></span>
   <span class="memReg"><?=$mem_reg?></span>
 </li>
-<script defer>
-  function confirmUpdate(){
-  document.adminMemUpdate.submit();
-}
-</script>
+</form>
+
 <?php
 }
 ?>
-</form>

@@ -9,9 +9,9 @@
       </div><!-- end of common title -->
       <div class="adminTable">
         <ul class="adminList">
-      <?php
-      include $_SERVER["DOCUMENT_ROOT"]."/space/data/ajax/qna_admin_ajax.php"
-      ?>
+
+        <!-- qna admin ajax -->
+
         </ul>
         <div class="bottomBox">
           <!-- <button type="button" class="checkDelBtn" onclick="confirmDel()">DELETE</button> -->

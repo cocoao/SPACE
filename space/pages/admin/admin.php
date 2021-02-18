@@ -64,5 +64,15 @@
     ?>
 
   </div><!-- end of wrap -->
+  <!-- <script>
+    function confirmDel(){
+    let confirmCheck = confirm('정말 삭제하시겠습니까?');
+    if(confirmCheck == false){
+      return false;
+    } else {
+      document.adminDelete.submit();
+    }
+  }
+  </script> -->
 </body>
 </html>

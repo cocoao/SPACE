@@ -39,9 +39,7 @@
           <div class="qnaTable">
             <ul class="qnaList">
 
-            <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/space/data/ajax/qna_ajax.php"
-            ?>
+            <!-- qna_qjax -->
 
             </ul>
           </div><!-- end of qnaTable -->

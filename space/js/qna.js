@@ -1,3 +1,15 @@
+$(function(){
+  let url = "/space/data/ajax/qna_ajax.php";
+  
+  $.get(
+    url,
+    {page:1},
+    function(qna_data){
+      $(".qnaList").html(qna_data);
+    }
+  );
+
+});
 
 function qnaWrSubmit(){
   if(!document.qnaWrForm.qnaWrTit.value){
@@ -103,5 +115,24 @@ $(document).on('click','.qnaContents',function(){
   } else {
     $(this).next().removeClass("active");
     $(this).next().addClass("active");
+  }
+});
+
+
+$(".qnaUpdateBtn").click(function(){
+  $(".qnaUpdateBtn").parents("div").toggleClass("on");
+  if($(".qnaUpdateBtn").parents("div").hasClass("on")){
+    $(".qnaUpdateBtn").text("취소");
+    $(".hiddenDelete").hide();
+    $(".hiddenUpdate").show();
+    $(".nowTit,.nowCon").hide();
+    $(".hiddenTit, .hiddenCon").show();
+
+  } else {
+    $(".qnaUpdateBtn").text("수정");
+    $(".hiddenDelete").show();
+    $(".hiddenUpdate").hide();
+    $(".nowTit,.nowCon").show();
+    $(".hiddenTit, .hiddenCon").hide();
   }
 });
