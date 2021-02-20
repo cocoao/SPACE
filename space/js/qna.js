@@ -39,18 +39,6 @@ qnaReset.addEventListener('click',function(e){
   return;
 });
 
-$(function(){
-  let url = "/space/data/ajax/qna_ajax.php";
-
-  $.get(
-    url,
-    {page:1},
-    function(qna_data){
-      $(".qnaList").html(qna_data);
-    }
-  );
-});
-
 let currentPage = 1;
 let pageLength = $(".pgNum").length;
 function getPage(no){
@@ -118,21 +106,30 @@ $(document).on('click','.qnaContents',function(){
   }
 });
 
-
-$(".qnaUpdateBtn").click(function(){
-  $(".qnaUpdateBtn").parents("div").toggleClass("on");
-  if($(".qnaUpdateBtn").parents("div").hasClass("on")){
-    $(".qnaUpdateBtn").text("취소");
-    $(".hiddenDelete").hide();
-    $(".hiddenUpdate").show();
-    $(".nowTit,.nowCon").hide();
-    $(".hiddenTit, .hiddenCon").show();
+$(document).on('click','.qnaUpdateBtn',function(){
+  const clickIndex = $(this).index();
+  // console.log(clickIndex);
+  $(this).parents("div").eq(clickIndex).toggleClass("on");
+  if($(this).parents("div").eq(clickIndex).hasClass("on")){
+    $(".qnaUpdateBtn").eq(clickIndex).text("취소");
+    $(".hiddenDelete").eq(clickIndex).hide();
+    $(".hiddenUpdate").eq(clickIndex).show();
+    $(".nowTit").eq(clickIndex).hide();
+    $(".nowCon").eq(clickIndex).hide();
+    $(".hiddenTit").eq(clickIndex).show();
+    $(".hiddenCon").eq(clickIndex).show();
 
   } else {
-    $(".qnaUpdateBtn").text("수정");
-    $(".hiddenDelete").show();
-    $(".hiddenUpdate").hide();
-    $(".nowTit,.nowCon").show();
-    $(".hiddenTit, .hiddenCon").hide();
+    $(".qnaUpdateBtn").eq(clickIndex).text("수정");
+    $(".hiddenDelete").eq(clickIndex).show();
+    $(".hiddenUpdate").eq(clickIndex).hide();
+    $(".nowTit").eq(clickIndex).show();
+    $(".nowCon").eq(clickIndex).show();
+    $(".hiddenTit").eq(clickIndex).hide();
+    $(".hiddenCon").eq(clickIndex).hide();
   }
+});
+
+$(document).on('click','.hiddenUpdate',function(){
+  document.qnaUpdate.submit();
 });

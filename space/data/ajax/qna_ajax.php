@@ -57,9 +57,9 @@ if(isset($_SESSION["userlevel"])){
     $ans_reg=$ans_row['SPACE_ANS_reg'];
     if(!$ans_num_row){
   ?>
-  <form action="#" method="post" name="qnaUpdate"></form>
+  <form action="/space/php_process/pages/qna_update.php?num=<?=$qna_num?>" method="post" name="qnaUpdate">  
   <span class="qnaTit">
-    <p><?=$qna_tit?></p>
+  <p class="nowTit"><?=$qna_tit?></p>
     <input type="text" value="<?=$qna_tit?>" class="hiddenTit" name="updateTit">
   </span>
   <?php
@@ -78,8 +78,47 @@ if(isset($_SESSION["userlevel"])){
 </li>
 
 <?php
-if($userlevel == 1){
+if(!$userlevel == 1){
 ?> 
+
+<div class="txtBox clear">
+  <div class="txtBoxWrap">
+  <div class="qnaConBtnBox">
+    <span class="qnaCon">
+      <p class="nowCon"><?=$qna_con?></p>
+      <textarea class="hiddenCon" value="<?=$qna_con?>" name="updateCon"><?=$qna_con?></textarea>
+    </span>
+    <div class="qnaBtns">
+      <div class="qnaBtn">  
+        <button type="button" class="qnaUpdateBtn">수정</button>
+        <button type="button" class="hiddenDelete">삭제</button>
+        <button type="submit" onclick="qnaUpdate()" class="hiddenUpdate">등록</button>
+      </div>
+    </div>
+  </div>
+  <?php
+    if(!$ans_num_row){
+  ?>
+  <spqn class="hidden"></spqn>
+  <?php
+    } else if($ans_num_row){
+  ?>
+  <span class="qnaAns">
+    <em><?=$ans_con?></em>
+    <span>
+      <p><?=$ans_reg?></p>
+    </span>
+  </span>
+  <?php
+    }
+  ?>
+  </div>  
+</div>
+
+<?php
+} else {
+?>
+
 <div class="txtBox clear">
   <div class="txtBoxWrap">
   <div class="qnaConBtnBox">
@@ -91,10 +130,25 @@ if($userlevel == 1){
       <div class="qnaBtn">
         <button type="button" class="qnaUpdateBtn">수정</button>
         <button type="button" class="hiddenDelete">삭제</button>
-        <button type="button" onclick="qnaUpdate()" class="hiddenUpdate">등록</button>
+        <button type="submit" onclick="qnaUpdate()" class="hiddenUpdate">등록</button>
       </div>
     </div>
   </div>
+  </form>
+  <?php
+    if(!$ans_num_row){
+  ?>
+    <div class="ansWrite">
+      <form action="/space/php_process/pages/ans_insert.php?num=<?=$qna_num?>" method="post" class="ansWrForm" name="ansWrForm" id="ansWrForm" enctype="multipart/form-data">
+        <textarea name="ansWrTxt" id="ansWrTxt" placeholder="내용을 입력해주세요."></textarea>
+        <div class="ansWriteBtns">
+          <button type="submit" class="ansSubmit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  <?php
+    } else if($ans_num_row){
+  ?>
   <span class="qnaAns">
     <em><?=$ans_con?></em>
     <span>
@@ -110,20 +164,12 @@ if($userlevel == 1){
       </div>
     </form>
   </div>
+  <?php
+    }
+  ?>
   </div>  
 </div>
-<?php
-} else {
-?>
-<div class="txtBox clear">
-  <span class="qnaCon"><?=$qna_con?></span>    
-  <span class="qnaAns">
-    <em><?=$ans_con?></em>
-    <span>
-      <p><?=$ans_reg?></p>
-    </span>
-  </span>
-</div>
+
 <?php
   }
 }
