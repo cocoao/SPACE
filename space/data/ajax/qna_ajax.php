@@ -91,7 +91,7 @@ if(!$userlevel == 1){
     <div class="qnaBtns">
       <div class="qnaBtn">  
         <button type="button" class="qnaUpdateBtn">수정</button>
-        <button type="button" class="hiddenDelete">삭제</button>
+        <button type="button" class="hiddenDelete" onclick="javascript:location.href='/space/php_process/pages/qna_delete.php?num=<?=$qna_num?>'">삭제</button>
         <button type="submit" onclick="qnaUpdate()" class="hiddenUpdate">등록</button>
       </div>
     </div>
@@ -129,7 +129,7 @@ if(!$userlevel == 1){
     <div class="qnaBtns">
       <div class="qnaBtn">
         <button type="button" class="qnaUpdateBtn">수정</button>
-        <button type="button" class="hiddenDelete">삭제</button>
+        <button type="button" class="hiddenDelete" onclick="javascript:location.href='/space/php_process/pages/qna_delete.php?num=<?=$qna_num?>'">삭제</button>
         <button type="submit" onclick="qnaUpdate()" class="hiddenUpdate">등록</button>
       </div>
     </div>
