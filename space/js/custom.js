@@ -34,17 +34,20 @@ $(function(){
       $(this).prev("ul").slideUp("fest"); 
     }
   });
-});
+
   
   // navigation about click
-  const loca = $(location).attr('href').split('#')[1];
-  console.log(loca)
+  var loca = $(location).attr('href').split('#')[1];
   if(loca == 'about'){
-    const aboutOff = $(".process").offset().top;
+    var aboutOff = $(".process").offset().top;
+    console.log(aboutOff);
     $("html, body").animate({scrollTop:aboutOff}, 1000, 'easeInQuint');
   }
 
   $("header .gnb li.aboutGnb").click(function(){
-    const aboutOff = $(".process").offset().top;
+    var aboutOff = $(".process").offset().top;
+    console.log(aboutOff);
     $("html, body").animate({scrollTop:aboutOff}, 1000, 'easeInQuint');
   });
+
+});
