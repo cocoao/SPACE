@@ -6,11 +6,9 @@ $(function(){
     {page:1},
     function(qna_data){
       $(".qnaList").html(qna_data);
-    }
+    },
   );
-
 });
-
 function qnaWrSubmit(){
   if(!document.qnaWrForm.qnaWrTit.value){
     alert("제목을 입력해주세요.");
@@ -23,12 +21,12 @@ function qnaWrSubmit(){
     return;
   }
   document.qnaWrForm.submit();
-}
+};
 
 function plzLogin(){
   alert("글쓰기를 하시려면 로그인이 필요합니다.")
   location.href='/space/pages/login/login_form.php'
-}
+};
 
 const qnaReset = document.querySelector(".reset");
 qnaReset.addEventListener('click',function(e){
@@ -54,7 +52,7 @@ function getPage(no){
     currentPage = no;
     }
   );
-}
+};
 $(".pgNum").eq(0).trigger('click');
 
 function goNext(){
@@ -63,7 +61,7 @@ function goNext(){
   } else {
     getPage(currentPage + 1);
   }
-}
+};
 
 function goPrev(){
   if(currentPage == 1){
@@ -71,15 +69,15 @@ function goPrev(){
   } else {
     getPage(currentPage - 1);
   }
-}
+};
 
 function goFirst(){
   getPage(1);
-}
+};
 
 function goLast(){
   getPage(pageLength);
-}
+};
 
 function search_check(){
   if(!document.qnaSearch.searchInput.value){
@@ -88,27 +86,24 @@ function search_check(){
     return;
   }
   document.qnaSearch.submit();
-}
+};
 
 function returnPage(){
   location.href='/space/pages/qna/qna.php';
-}
-
+};
 
 $(document).on('click','.qnaContents',function(){
-  // let qnaIndex = $(this).index();
-  // console.log(qnaIndex);
-    if($(this).next().hasClass("active")){
-      $(this).next().removeClass("active");
+  if($(this).next('.txtBox').hasClass("active")){
+    $(this).next('.txtBox').removeClass("active");
   } else {
-    $(this).next().removeClass("active");
-    $(this).next().addClass("active");
+    $('.qnaContents').siblings('.txtBox').removeClass("active");
+    $(this).next('.txtBox').addClass("active");
   }
-});
+}); 
 
 $(document).on('click','.qnaUpdateBtn',function(){
-  const clickIndex = $(this).index();
-  // console.log(clickIndex);
+  const clickIndex = $(this).parents('form').index();
+  console.log(clickIndex);
   $(this).parents("div").eq(clickIndex).toggleClass("on");
   if($(this).parents("div").eq(clickIndex).hasClass("on")){
     $(".qnaUpdateBtn").eq(clickIndex).text("취소");
@@ -130,6 +125,6 @@ $(document).on('click','.qnaUpdateBtn',function(){
   }
 });
 
-$(document).on('click','.hiddenUpdate',function(){
-  document.qnaUpdate.submit();
-});
+// $(document).on('click','.hiddenUpdate',function(){
+//   document.qnaUpdate.submit();
+// });

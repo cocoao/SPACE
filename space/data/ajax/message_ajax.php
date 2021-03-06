@@ -1,4 +1,3 @@
-
 <li class="adminTitle clear">
   <span class="msgCheck">선택</span>
   <span class="msgNum">번호</span>
@@ -29,18 +28,18 @@ while($msg_row=mysqli_fetch_array($msg_result)){
   $msg_con = $msg_row['SPACE_MSG_con'];
 ?>
 <form action="/space/php_process/admin/msg_check_delete.php" method="post" name="adminDelete">
-<li class="adminContents clear">
-  <span class="msgCheck"><input type="checkbox" name="item[]" value="<?=$msg_num?>"></span>
-  <span class="msgNum"><?=$msg_num?></span>
-  <span class="msgTit"><?=$msg_tit?></span>
-  <span class="msgName"><?=$msg_name?></span>
-  <span class="msgEmail"><?=$msg_email?></span>
-  <span class="msgReg"><?=$msg_reg?></span>
-</li>
-<div class="txtBox clear">
-  <span class="msgCon"><?=$msg_con?></span>
-</div>
-<?php
-}
-?>
+  <li class="adminContents clear">
+    <span class="msgCheck"><input type="checkbox" name="item[]" value="<?=$msg_num?>"></span>
+    <span class="msgNum"><?=$msg_num?></span>
+    <span class="msgTit"><?=$msg_tit?></span>
+    <span class="msgName"><?=$msg_name?></span>
+    <span class="msgEmail"><?=$msg_email?></span>
+    <span class="msgReg"><?=$msg_reg?></span>
+  </li>
+  <div class="txtBox clear">
+    <span class="msgCon"><?=$msg_con?></span>
+  </div>
+  <?php
+  }
+  ?>
 </form>

@@ -3,8 +3,6 @@
 $login_id=$_POST['loginId'];
 $login_pass=$_POST['loginPass'];
 
-// echo $login_id,$login_pass;
-
 include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
 $sql="select*from SPACE_MEM where SPACE_MEM_id='$login_id'";
 
@@ -41,5 +39,5 @@ if(!$num_match){
     </script>
     ";
   }
-}
+};
 ?>

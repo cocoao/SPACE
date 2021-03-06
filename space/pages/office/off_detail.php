@@ -1,39 +1,39 @@
 <?php
-$off__detail_num=$_GET['num'];
+  $off__detail_num=$_GET['num'];
 
-include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
-$sql="select* from SPACE_OFF where SPACE_OFF_num=$off__detail_num";
+  include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
+  $sql="select* from SPACE_OFF where SPACE_OFF_num=$off__detail_num";
 
-$result=mysqli_query($dbConn,$sql);
-$row_result=mysqli_fetch_array($result);
+  $result=mysqli_query($dbConn,$sql);
+  $row_result=mysqli_fetch_array($result);
 
-$off__detail_tit=$row_result['SPACE_OFF_tit'];
-$off__detail_type=$row_result['SPACE_OFF_type'];
-$off__detail_cli=$row_result['SPACE_OFF_cli'];
-$off__detail_term=$row_result['SPACE_OFF_term'];
+  $off__detail_tit=$row_result['SPACE_OFF_tit'];
+  $off__detail_type=$row_result['SPACE_OFF_type'];
+  $off__detail_cli=$row_result['SPACE_OFF_cli'];
+  $off__detail_term=$row_result['SPACE_OFF_term'];
 
-$off__detail_desc=nl2br($row_result['SPACE_OFF_desc']);
-$off__detail_desc = addslashes($off__detail_desc);
+  $off__detail_desc=nl2br($row_result['SPACE_OFF_desc']);
+  $off__detail_desc = addslashes($off__detail_desc);
 
-$off__detail_img1=$row_result['SPACE_OFF_img1'];
-$off__detail_img2=$row_result['SPACE_OFF_img2'];
-$off__detail_img3=$row_result['SPACE_OFF_img3'];
-$off__detail_img4=$row_result['SPACE_OFF_img4'];
+  $off__detail_img1=$row_result['SPACE_OFF_img1'];
+  $off__detail_img2=$row_result['SPACE_OFF_img2'];
+  $off__detail_img3=$row_result['SPACE_OFF_img3'];
+  $off__detail_img4=$row_result['SPACE_OFF_img4'];
 
-if(!$off__detail_img3){
+  if(!$off__detail_img3){
 ?>
 <style>
   .imgNav a:nth-child(3){display:none;}
 </style>
 <?php  
-}
-if(!$off__detail_img4){
+  }
+  if(!$off__detail_img4){
 ?>
 <style>
   .imgNav a:nth-child(4){display:none;}
 </style>
 <?php  
-}
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,22 +134,18 @@ if(!$off__detail_img4){
                 <p><?=$off__detail_desc?></p>
               </div>
             </div>
-
             <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/space/include/liv_side.php";
-            include $_SERVER["DOCUMENT_ROOT"]."/space/include/sto_side.php";
+              include $_SERVER["DOCUMENT_ROOT"]."/space/include/liv_side.php";
+              include $_SERVER["DOCUMENT_ROOT"]."/space/include/sto_side.php";
             ?> 
-
           </div>
         </div><!-- end of detail box -->
       </div><!-- end of center -->
-</section>
+    </section>
 
     <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
-    ?> 
-    <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
+      include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php";
+      include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php";
     ?>
   </div><!-- end of wrap -->
 </body>

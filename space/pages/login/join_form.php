@@ -23,7 +23,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="/space/js/custom.js" defer></script>
   <script src="/space/js/join.js" defer></script>
-
 </head>
 <body>
   <div class="wrap">
@@ -77,10 +76,8 @@
     </section><!-- end of about section -->
 
     <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
-    ?> 
-    <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php";
     ?>
 
   </div><!-- end of wrap -->

@@ -91,8 +91,8 @@
 
   echo "
   <script>
-      alert('수정이 완료되었습니다.');
-      location.href='/space/pages/living/liv.php';
+    alert('수정이 완료되었습니다.');
+    location.href='/space/pages/living/liv.php';
   </script>
   "
 ?>

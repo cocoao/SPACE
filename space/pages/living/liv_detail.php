@@ -139,17 +139,14 @@ if(!$liv__detail_img4){
             include $_SERVER["DOCUMENT_ROOT"]."/space/include/off_side.php";
             include $_SERVER["DOCUMENT_ROOT"]."/space/include/sto_side.php";
             ?> 
-
           </div>
         </div><!-- end of detail box -->
       </div><!-- end of center -->
-</section>
+    </section>
 
     <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
-    ?> 
-    <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php";
     ?>
   </div><!-- end of wrap -->
 </body>

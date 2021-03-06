@@ -9,10 +9,10 @@
 
 .adminPanel{width: 80%; height: auto; margin: auto;}
 .adminPanel .adminTable li{border-bottom: 1px dotted #644600;}
-/* .adminPanel .adminTable li:last-child{border-bottom: 1px solid #644600;} */
 .adminPanel .adminTable li.adminTitle{width: 100%; height: auto; background: #644600; margin-top: 20px;}
 .adminPanel .adminTable li span{color: #fff; text-align: center; padding: 7px 0; float: left;}
 
+/* admin message style */
 .adminPanel .adminTable li span.msgCheck{width: 5%;}
 .adminPanel .adminTable li span.msgNum{width: 8%;}
 .adminPanel .adminTable li span.msgTit{width: 42%; cursor: pointer; text-align: center;}
@@ -21,7 +21,6 @@
 .adminPanel .adminTable li span.msgReg{width: 20%;}
 
 .adminPanel li.adminContents span{color: #333;}
-/* .adminPanel li.adminContents span.msgTit{text-align: left;} */
 .adminPanel .adminTable li span.msgCheck input{min-height: 1.5;}
 
 .adminPanel .txtBox{display: none;}
@@ -39,28 +38,27 @@
 
 /* admin member style */
 .adminPanel .adminTable li span.memCheck{width: 10%;}
-.adminPanel .adminTable li span.memId{width: 8%;}
+.adminPanel .adminTable li span.memId{width: 10%;}
 .adminPanel .adminTable li span.memName{width: 10%;}
 .adminPanel .adminTable li span.memEmail{width: 20%;}
-.adminPanel .adminTable li span.memPo{width:15%;}
-.adminPanel .adminTable li span.memLv{width: 15%;}
-.adminPanel .adminTable li span.memReg{width: 22%;}
+.adminPanel .adminTable li span.memPo{width:20%;}
+.adminPanel .adminTable li span.memLv{width: 20%;}
+.adminPanel .adminTable li span.memUp{width: 10%;}
 
 .memAdmin input{width: 50%; border: 1px solid #644600; outline: 0; text-align: center;}
 .memBtns{width: 50%;}
 .memBtns button{width: 20%; height: 30px;}
+.memAdmin .bottomBox .paging{justify-content: center; width: 100%;}
 
 /* admin qna style */
-.adminPanel .adminTable li span.qnaCheck{width: 10%;}
-.adminPanel .adminTable li span.qnaNum{width: 10%;}
+.adminPanel .adminTable li span.qnaCheck{width: 15%;}
+.adminPanel .adminTable li span.qnaNum{width: 15%;}
 .adminPanel .adminTable li span.qnaTit{width: 45%; cursor: pointer;}
 .adminPanel .adminTable li span.qnaId{width: 10%;}
 .adminPanel .adminTable li span.qnaReg{width:15%;}
-.adminPanel .adminTable li span.qnaHit{width: 10%;}
+
 .qnaDelBtn{border: 1px solid #644600; outline: 0; padding:0 5px; color: #644600;}
 .qnaDelBtn:hover{background: #644600; color: #fff;}
-
-/* .adminPanel .adminTable .adminDelete li{border-bottom: 1px dotted #644600;} */
 
 .txtBox{display: none;}
 .txtBox.active{display: block; text-align: left; background: #eee; padding-bottom: 20px;}

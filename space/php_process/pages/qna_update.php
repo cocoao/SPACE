@@ -15,8 +15,8 @@ mysqli_query($dbConn,$sql);
 
 // echo "
 // <script>
-//     alert('수정이 완료되었습니다.');
-//     location.href='/space/pages/qna/qna_view.php?num=$qna_update_num';
+//   alert('수정이 완료되었습니다.');
+//   location.href='/space/pages/qna/qna_view.php?num=$qna_update_num';
 // </script>
 // "
 ?>

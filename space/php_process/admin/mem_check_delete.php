@@ -2,7 +2,6 @@
 <?php
 $admin_mem_num=$_GET['num'];
 
-// echo $admin_mem_num;
 include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
 $sql="delete from SPACE_MEM where SPACE_MEM_num=$admin_mem_num";
 

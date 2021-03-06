@@ -9,5 +9,4 @@
     location.href='/space/index.php'
   </script>
   "
-
 ?>

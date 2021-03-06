@@ -30,24 +30,23 @@
     </div>
   </div>
   <div class="loginBox">
-
     <?php
       if(!$userid){
     ?>
-      <a href="/space/pages/login/login_form.php">LOGIN</a>
-      <a href="/space/pages/login/join_form.php">JOIN</a>
+    <a href="/space/pages/login/login_form.php">LOGIN</a>
+    <a href="/space/pages/login/join_form.php">JOIN</a>
     <?php
       } else {
         if($userlevel==1){
-      ?>
-      <a href="/space/pages/login/login_form.php"><?=$userid?>[<?=$userpoint?>]</a>
-      <a href="/space/php_process/login/logout.php">LOGOUT</a>
-      <a href="/space/pages/admin/admin.php?key=admin_msg">ADMIN</a>
+    ?>
+    <a href="/space/pages/login/login_form.php"><?=$userid?> / lv.<?=$userlevel?></a>
+    <a href="/space/php_process/login/logout.php">LOGOUT</a>
+    <a href="/space/pages/admin/admin.php?key=admin_msg">ADMIN</a>
     <?php
       } else {
     ?>
-      <a href="/space/pages/login/login_form.php"><?=$userid?>[<?=$userpoint?>]</a>
-      <a href="/space/php_process/login/logout.php">LOGOUT</a>
+    <a href="/space/pages/login/login_form.php"><?=$userid?> / lv.<?=$userlevel?></a>
+    <a href="/space/php_process/login/logout.php">LOGOUT</a>
     <?php
       }
     }
@@ -85,4 +84,4 @@
   } else if(pathname.includes("qna")){
     gnbLi[4].classList.add("active");
   }
-  </script>
+</script>

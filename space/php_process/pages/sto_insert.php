@@ -86,18 +86,9 @@
 
   mysqli_query($dbConn,$sql);
 
-  // if($dbConn) {
-  //   echo "
-  //   <script>
-  //       alert('connected');
-  //   </script>
-  //   ";
-  // }
-
-  // echo $sto_title, $sto_type, $sto_client, $sto_term,$sto_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
   echo "
   <script>
-      location.href='/space/pages/store/sto.php';
+    location.href='/space/pages/store/sto.php';
   </script>
   "
 ?>

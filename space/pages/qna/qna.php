@@ -23,7 +23,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="/space/js/custom.js" defer></script>
   <script src="/space/js/qna.js" defer></script>
-
 </head>
 <body>
   <div class="wrap">
@@ -82,46 +81,43 @@
           </div><!-- end of bottomBox -->
         </div><!-- end of qnaBoxes -->
         <div class="qnaWriteBox">
-
         <?php
         if($userid == ''){
         ?>
         <div class="qnaWrite">
-            <form action="/space/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="qnaWrForm" name="qnaWrForm">
-              <input type="text" name="qnaWrTit" id="qnaWrTit" placeholder="제목을 입력해주세요." onclick="plzLogin()">
-              <textarea name="qnaWrTxt" id="qnaWrTxt" placeholder="내용을 입력해주세요." onclick="plzLogin()"></textarea>
-            </form>
-            <div class="qnaWriteBtns">
-              <button class="reset" onclick="plzLogin()">RESET</button>
-              <button onclick="plzLogin()">SUBMIT</button>
-            </div>
+          <form action="/space/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="qnaWrForm" name="qnaWrForm">
+            <input type="text" name="qnaWrTit" id="qnaWrTit" placeholder="제목을 입력해주세요." onclick="plzLogin()">
+            <textarea name="qnaWrTxt" id="qnaWrTxt" placeholder="내용을 입력해주세요." onclick="plzLogin()"></textarea>
+          </form>
+          <div class="qnaWriteBtns">
+            <button class="reset" onclick="plzLogin()">RESET</button>
+            <button onclick="plzLogin()">SUBMIT</button>
           </div>
         </div>
+        </div>
         <?php
-        } else {
+          } else {
         ?>
         <div class="qnaWrite">
-            <form action="/space/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="qnaWrForm" name="qnaWrForm">
-              <input type="text" name="qnaWrTit" id="qnaWrTit" placeholder="제목을 입력해주세요.">
-              <textarea name="qnaWrTxt" id="qnaWrTxt" placeholder="내용을 입력해주세요."></textarea>
-            </form>
-            <div class="qnaWriteBtns">
-              <button class="reset">RESET</button>
-              <button type="submit" class="submit" onclick="qnaWrSubmit()">SUBMIT</button>
-            </div>
+          <form action="/space/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="qnaWrForm" name="qnaWrForm">
+            <input type="text" name="qnaWrTit" id="qnaWrTit" placeholder="제목을 입력해주세요.">
+            <textarea name="qnaWrTxt" id="qnaWrTxt" placeholder="내용을 입력해주세요."></textarea>
+          </form>
+          <div class="qnaWriteBtns">
+            <button class="reset">RESET</button>
+            <button type="submit" class="submit" onclick="qnaWrSubmit()">SUBMIT</button>
           </div>
         </div>
+        </div>
         <?php
-        }
+          }
         ?>
       </div>
     </section><!-- end of liv section -->
 
     <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
-    ?> 
-    <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php";
     ?>
 
   </div><!-- end of wrap -->

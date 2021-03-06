@@ -14,5 +14,5 @@ if(!$check_id){
   } else {
     echo $check_id."는(은) 사용 가능합니다.";
   }
-}
+};
 ?>

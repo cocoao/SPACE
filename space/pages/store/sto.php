@@ -36,26 +36,25 @@
           <h2>Store Space</h2>
         </div><!-- end of common title -->
         <div class="inBoxes stoBoxes">
-
         <?php
-        include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
-        $sql="select * from SPACE_STO order by SPACE_STO_num desc";
+          include $_SERVER['DOCUMENT_ROOT'].'/space/php_process/connect/db_connect.php';
+          $sql="select * from SPACE_STO order by SPACE_STO_num desc";
 
-        $result=mysqli_query($dbConn,$sql);
-        while($row=mysqli_fetch_array($result)){
-          $liv_num=$row['SPACE_STO_num'];
-          $liv_main=$row['SPACE_STO_img1'];
+          $result=mysqli_query($dbConn,$sql);
+          while($row=mysqli_fetch_array($result)){
+            $liv_num=$row['SPACE_STO_num'];
+            $liv_main=$row['SPACE_STO_img1'];
         ?>
           <div class="inBox stoBox">
             <div class="imgBox">
-            <div class="hoverWhite"></div>
-            <a href="/space/pages/store/sto_detail.php?num=<?=$liv_num?>" class="viewBtn">view detail</a>
+              <div class="hoverWhite"></div>
+              <a href="/space/pages/store/sto_detail.php?num=<?=$liv_num?>" class="viewBtn">view detail</a>
               <img src="/space/data/store/<?=$liv_main?>" alt="store_img" id="imgView">
             </div>
           </div>
-        <?php
-          }
-        ?>  
+          <?php
+            }
+          ?>  
         </div>
         <div class="inBtns btns">
           <?php
@@ -74,13 +73,11 @@
           }
         ?>
       </div>
-</section>
+    </section>
 
     <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
-    ?> 
-    <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php";
     ?>
   </div><!-- end of wrap -->
 </body>

@@ -28,32 +28,4 @@ loadMore();
 
   $(".imgNav>a").eq(0).trigger("click");
 
-
-
-    
-
-  // $(".imgNull[src='']").hide();
-
-  // if ($(".imgNull").attr(src="") == "") {
-  //   $(".imgNull").hide();
-  // }
-  // else {
-  //   $(".imgNull").show();
-  // }
 });
-
-// $(document).ready(function(){
-//   $('.imgBox img[src=""]').hide();
-//   $('.imagen:not([src=""])').show();
-// });
-
-// $(document).ready(function() {
-//   $(".navImage").each(function() {
-//        var atr = $(".navImage").attr("src"); 
-//        if(atr == "") {
-//            $(".imgNull").addClass("hidden");
-//        } else {
-//            $(".imgNull").removeClass("hidden");
-//        }
-//    });
-// });

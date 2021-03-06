@@ -22,7 +22,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="/space/js/custom.js" defer></script>
-
 </head>
 <body>
   <div class="wrap">
@@ -58,16 +57,12 @@
     </section><!-- end of about section -->
 
     <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php"
-    ?> 
-    <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/about.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php";
     ?>
-
   </div><!-- end of wrap -->
 
   <script>
-      
     const loginBtn = document.querySelector('.loginBtn');
     loginBtn.addEventListener('click', loginCheck);
 
@@ -83,7 +78,7 @@
         return;
       }
       document.loginForm.submit();
-    }
+    };
 
     (function(){
       document.addEventListener('keydown',function(e){

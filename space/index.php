@@ -201,7 +201,6 @@
                 그리하여 오늘날 인테리어 디자인을 대상으로 하는 범위는 거의 모든 건축물을 대상으로 한다. 주택을 비롯하여 사무실, 상점, 병원, 호텔, 레스토랑, 카페, 백화점, 미용실, 의상실, 공장, 학교 등 인간이 거주하게 되는 모든 건축물이 해당된다. 우리나라에서도 초기에는 실내장식(Interior Decoration)의 의미만을 갖고 있었지만, 오늘날에는 계획, 코디네이트, 디스플레이의 개념을 형성하고 있다.</p>
               </div>
             </div>
-          </div>
           </div><!-- end of processTxtBox -->
         </div><!-- end of processBoxes -->
       </div>
@@ -237,7 +236,6 @@
     <?php
     include $_SERVER["DOCUMENT_ROOT"]."/space/include/footer.php"
     ?>
-
   </div><!-- end of wrap -->
   <script>
   let contSendBtn = document.querySelector(".contSend");

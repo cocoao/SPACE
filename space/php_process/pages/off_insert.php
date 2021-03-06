@@ -86,18 +86,9 @@
 
   mysqli_query($dbConn,$sql);
 
-  // if($dbConn) {
-  //   echo "
-  //   <script>
-  //       alert('connected');
-  //   </script>
-  //   ";
-  // }
-
-  // echo $off_title, $off_type, $off_client, $off_term,$off_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
   echo "
   <script>
-      location.href='/space/pages/office/off.php';
+    location.href='/space/pages/office/off.php';
   </script>
   "
 ?>

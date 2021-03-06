@@ -11,8 +11,8 @@ mysqli_query($dbConn,$sql);
 
 echo "
 <script>
-alert ('답글이 등록되었습니다.');
-history.go(-1);
+  alert ('답글이 등록되었습니다.');
+  history.go(-1);
 </script>
 ";
 ?>

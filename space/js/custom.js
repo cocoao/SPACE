@@ -35,7 +35,6 @@ $(function(){
     }
   });
 
-  
   // navigation about click
   var loca = $(location).attr('href').split('#')[1];
   if(loca == 'about'){

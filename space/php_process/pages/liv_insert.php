@@ -86,15 +86,6 @@
 
   mysqli_query($dbConn,$sql);
 
-  // if($dbConn) {
-  //   echo "
-  //   <script>
-  //       alert('connected');
-  //   </script>
-  //   ";
-  // }
-
-  // echo $liv_title, $liv_type, $liv_client, $liv_term,$liv_desc,$main_name,$sub1_name,$sub2_name,$sub3_name;
   echo "
   <script>
       location.href='/space/pages/living/liv.php';

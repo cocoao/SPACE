@@ -61,22 +61,21 @@
   /* qna style */
   .qnaBoxes .qnaTable li span.qnaNum{width: 10%;}
   .qnaBoxes .qnaTable li span.qnaTit{width: 60%;}
-  .qnaBoxes .qnaTable li span.qnaId{width: 20%;}
-  .qnaBoxes .qnaTable li span.qnaReg{display: none;}
-  .qnaBoxes .qnaTable li span.qnaHit{width: 10%;}
+  .qnaBoxes .qnaTable li span.qnaId{width: 15%;}
+  .qnaBoxes .qnaTable li span.qnaReg{width: 15%;}
 
   .qnaWriteBox .qnaWrForm{width: 85%;}
   .qnaWriteBox .qnaWriteBtns{width: 14%;}
 
   /* admin style */
   .adminPanel .bottomBox button{font-size: 12px;}
-  .adminPanel .adminTable li span.memCheck{width: 10%;}
+  .adminPanel .adminTable li span.memCheck{width: 15%;}
   .adminPanel .adminTable li span.memId{width: 15%;}
   .adminPanel .adminTable li span.memName{width: 15%;}
-  .adminPanel .adminTable li span.memEmail{width: 30%;}
-  .adminPanel .adminTable li span.memPo{width:15%;}
-  .adminPanel .adminTable li span.memLv{width: 15%;}
-  .adminPanel .adminTable li span.memReg{display: none;}
+  .adminPanel .adminTable li span.memEmail{display: none;}
+  .adminPanel .adminTable li span.memPo{width:20%;}
+  .adminPanel .adminTable li span.memLv{width: 20%;}
+  .adminPanel .adminTable li span.memUp{width: 15%;}
 }
 
 @media screen and (max-width:750px){
@@ -104,8 +103,6 @@
 
   .intro .introBox{flex-wrap: wrap; justify-content: center;}
   .intro .introBox .introCon{width: 80%; margin: 0 auto 10px; height: 350px; overflow: hidden;}
-  /* .intro .introBox .introCon .introTxt em{font-size: 38px;}
-  .intro .introBox .introCon .introTxt h3{font-size: 16px;} */
 
   .interior .interiorBox{flex-wrap: wrap; padding: 5px; padding: 20px 0;}
   .interior .interiorBox>div{width: calc(50% - 5px);}
@@ -156,7 +153,7 @@
   .bottomBox .search .qnaSearchBtn{width: calc(11% - 5px);}
   .bottomBox .paging{width: 100%; padding-top: 20px; justify-content: center;}
   .qnaBoxes .qnaTable li span{padding: 7px 0; font-size: 12px;}
-  
+  .adminPanel .adminTable li span,.adminPanel .bottomBox button, .memAdmin input, .qnaDelBtn{font-size: 12px;}
   
   .qnaWriteBox .qnaWrite{flex-direction: column;}
   .qnaWriteBox .qnaWrForm{width: 100%;}
@@ -180,19 +177,12 @@
   .adminPanel .adminTable li span.msgReg{display: none;}
 
   .adminPanel .bottomBox .memBtns button{width: 40%;}
-  .adminPanel .adminTable li span.memCheck{width: 15%;}
-  .adminPanel .adminTable li span.memId{width: 25%;}
-  .adminPanel .adminTable li span.memName{width: 20%;}
-  .adminPanel .adminTable li span.memEmail{display: none;}
-  .adminPanel .adminTable li span.memPo{width:20%;}
-  .adminPanel .adminTable li span.memLv{width: 20%;}
 
   .adminPanel .adminTable li span.qnaCheck{width: 20%;}
   .adminPanel .adminTable li span.qnaNum{display: none;}
   .adminPanel .adminTable li span.qnaTit{width: 60%;}
   .adminPanel .adminTable li span.qnaId{width: 20%;}
   .adminPanel .adminTable li span.qnaReg{display: none;}
-  .adminPanel .adminTable li span.qnaHit{display: none;}
 
   .adminPanel .bottomBox{padding-top: 10px;}
   .adminPanel .bottomBox button{height: 20px; width: 20%;}
@@ -233,23 +223,37 @@
   .joinBox .inputBox select{width: 21%;}
 
   .detailContents{width: 100%;}
-
   .imgNav a{width: 30px; height: 30px; margin-left: 10px;}
 
   /* qna style */
-  .qnaBoxes .qnaTable li span.qnaNum{width: 15%;}
-  .qnaBoxes .qnaTable li span.qnaTit{width: 60%;}
-  .qnaBoxes .qnaTable li span.qnaId{width: 25%;}
-  .qnaBoxes .qnaTable li span.qnaHit{display: none;}
+  .qnaBoxes .qnaTable li span.qnaNum{width: 20%;}
+  .qnaBoxes .qnaTable li span.qnaTit{width: 80%;}
+  .qnaBoxes .qnaTable li span.qnaId{display: none;}
+  .qnaBoxes .qnaTable li span.qnaReg{display: none;}
 
   .qnaWriteBox{padding-top: 60px;}
-
   .ansWrite,.qnaBoxes .qnaAns,.ansWrite{margin: 20px 20px 0;}
   .qnaBoxes .qnaCon{padding: 20px;}
+  .bottomBox .search .searchSelect,.bottomBox .search .searchInput{font-size: 12px;}
+  .bottomBox .paging span{font-size: 12px; width: 20px; height: 20px;}
 
   /* admin style */
   .adminTab{margin: 20px 0 30px;}
   .adminTab button{width: 25%; padding: 7px 0;}
   .adminPanel .adminTable li{font-size: 12px;}
+  .adminPanel .bottomBox button{width: 30%;}
 
+  .adminPanel .adminTable li span.qnaCheck{width: 25%;}
+  .adminPanel .adminTable li span.qnaTit{width: 75%;}
+  .adminPanel .adminTable li span.qnaId{display: none;}
+
+  .memAdmin input{width: 80%;}
+  .adminPanel .adminTable li span.memCheck{width: 20%;}
+  .adminPanel .adminTable li span.memId{width: 20%;}
+  .adminPanel .adminTable li span.memName{display: none;}
+  .adminPanel .adminTable li span.memPo{width:20%;}
+  .adminPanel .adminTable li span.memLv{width: 20%;}
+  .adminPanel .adminTable li span.memUp{width: 20%;}
+  .adminPanel .bottomBox button, .memAdmin input, .qnaDelBtn{font-size: 11px;}
+  .qnaDelBtn{padding: 0 3px;}
 }
