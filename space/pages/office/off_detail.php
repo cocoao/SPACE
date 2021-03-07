@@ -93,10 +93,16 @@
                   <img src="/space/data/office/<?=$off__detail_img4?>" alt="office1">
                 </a>
               </div>
+              <?php
+              if($userlevel==1){
+              ?>
               <div class="btns">
                 <a href="/space/pages/admin/update_form.php?key=off_update_form&num=<?=$off__detail_num?>">UPDATE</a>
                 <a href="/space/php_process/pages/off_detail_delete.php?num=<?=$off__detail_num?>">DELETE</a>
              </div>
+             <?php
+              }
+             ?>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">

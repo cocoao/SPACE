@@ -93,10 +93,16 @@ if(!$liv__detail_img4){
                   <img src="/space/data/living/<?=$liv__detail_img4?>" alt="living1">
                 </a>
               </div>
+              <?php
+              if($userlevel==1){
+              ?>
               <div class="btns">
                 <a href="/space/pages/admin/update_form.php?key=liv_update_form&num=<?=$liv__detail_num?>">UPDATE</a>
                 <a href="/space/php_process/pages/liv_detail_delete.php?num=<?=$liv__detail_num?>">DELETE</a>
              </div>
+             <?php
+              }
+              ?>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">

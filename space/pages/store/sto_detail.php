@@ -94,10 +94,16 @@
                   <img src="/space/data/store/<?=$sto_detail_img4?>" alt="store4">
                 </a>
               </div>
+              <?php
+              if($userlevel==1){
+              ?>
               <div class="btns">
                 <a href="/space/pages/admin/update_form.php?key=sto_update_form&num=<?=$sto_detail_num?>">UPDATE</a>
                 <a href="/space/php_process/pages/sto_detail_delete.php?num=<?=$sto_detail_num?>">DELETE</a>
              </div>
+             <?php
+              }
+             ?>
             </div>
             <div class="imgBoxes">
               <div class="imgBox">
