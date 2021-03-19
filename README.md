@@ -1,8 +1,8 @@
-# SPACE 
+# SPACE  [![LinkedIn badge](http://img.shields.io/badge/Space-63460a?style=flat?link=http://cocoao.dothome.co.kr/space)](http://cocoao.dothome.co.kr/space)
 ![space_main](https://user-images.githubusercontent.com/77706809/111737128-64234c80-88c2-11eb-9231-a46755f8efa5.gif)
 <br>
 
-### 데이터베이스를 이용한 인테리어 포트폴리오 사이트  [![LinkedIn badge](http://img.shields.io/badge/Space-63460a?style=flat?link=http://cocoao.dothome.co.kr/space)](http://cocoao.dothome.co.kr/space)
+### 데이터베이스를 이용한 인테리어 포트폴리오 사이트
 > 프론트 앤드 개발부터 서버 사이트까지 통합한 포괄적 기능<br>
 > 데이터 입력 및 출력, 검색까지 전반적인 백앤드 기능 구현<br>
 > Admin 기능으로 입력된 데이터의 검색, 수정 등 전반적인 관리<br>
