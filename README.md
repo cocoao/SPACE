@@ -1,4 +1,4 @@
-# SPACE  [![LinkedIn badge](http://img.shields.io/badge/Space-63460a?style=flat?link=http://cocoao.dothome.co.kr/space)](http://cocoao.dothome.co.kr/space)
+# SPACE  [![LinkedIn badge](http://img.shields.io/badge/SPACE-63460a?style=flat?link=http://cocoao.dothome.co.kr/space)](http://cocoao.dothome.co.kr/space)
 ![space_main](https://user-images.githubusercontent.com/77706809/111737128-64234c80-88c2-11eb-9231-a46755f8efa5.gif)
 <br>
 <br>
